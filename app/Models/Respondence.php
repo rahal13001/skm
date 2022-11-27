@@ -12,4 +12,9 @@ class Respondence extends Model
     protected $guarded =[
         'id', 'created_at', 'updated_at'
     ];
+
+    public function datasurvei(){
+        return $this->belongsTo(Datasurvei::class);
+    }
+
 }

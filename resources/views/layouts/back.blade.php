@@ -1,5 +1,5 @@
 @extends('layouts.base')
-
+@yield('css')
 
     @section('body') 
  <header class="app-header fixed-top">	 
