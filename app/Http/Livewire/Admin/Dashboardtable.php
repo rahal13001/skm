@@ -28,6 +28,9 @@ class Dashboardtable extends Component
     public $kenilai = "";
     public $orderby = "id";
     public $asc = "ASC";
+    public $selectPage= false;
+    public $selectAll=false;
+ 
 
 
     public function drnilai(){
@@ -48,6 +51,7 @@ class Dashboardtable extends Component
             ]);
     }
 
+
     public function isChecked($datasurvei_id)
     {
         return in_array($datasurvei_id, $this->checked);
@@ -58,12 +62,17 @@ class Dashboardtable extends Component
         Datasurvei::with('respondence')->whereKey($this->checked)->delete();
 
         $this->checked = [];
+        $this->selectAll=false;
+        $this->selectPage=false;
         session()->flash('info','Data Berhasil Terhapus');
     }
 
 
     public function deleteSatuData($datasurvei_id){
+        
         Datasurvei::with('respondence')->where('id', $datasurvei_id)->delete();
+
+        $this->checked = array_diff($this->checked, [$datasurvei_id]);
         session()->flash('info','Data Berhasil Terhapus');
     }
 
@@ -73,16 +82,50 @@ class Dashboardtable extends Component
 
     public function render()
     { 
-        $datasurveis = Datasurvei::select(['datasurveis.*', 'respondences.nama as nama', 'respondences.badan_usaha as badan_usaha'])
+       
+ 
+        return view('livewire.admin.dashboardtable', [
+            'datasurveis' => $this->datasurveis
+        ]);
+    }
+
+    public function updatedSelectPage($value){
+        if ($value) {
+            $this->checked = $this->datasurveis->pluck('id')->toArray();
+        } else {
+            $this->checked = [];
+        }
+        
+    }
+
+    public function updatedChecked(){
+        $this->selectPage =false;
+    }
+
+    public function selectAll(){
+        $this->selectAll=true;
+        $this->checked = $this->dataSurveisQuery->pluck('id')->toArray();
+    }
+
+    public function selectPart(){
+        $this->selectAll=false;
+        $this->checked = $this->datasurveis->pluck('id')->toArray();
+    }
+
+    public function getDataSurveisProperty(){
+        return $this->dataSurveisQuery->paginate($this->paginate);
+    }
+
+    public function getDataSurveisQueryProperty(){
+        return Datasurvei::select(['datasurveis.*', 'respondences.nama as nama', 'respondences.badan_usaha as badan_usaha'])
         ->join('respondences', 'respondences.datasurvei_id', '=', 'datasurveis.id')
         ->cari(trim($this->cari))
         ->whereBetween('tahun', [trim($this->darithn), trim($this->kethn)])
         ->whereBetween('tw', [trim($this->daritw), trim($this->ketw)])
         ->when($this->drnilai && $this->kenilai, function($query){
             $query->whereBetween('total', [trim($this->drnilai), trim($this->kenilai)]);})
-        ->orderBy($this->orderby, $this->asc)
-        ->paginate($this->paginate);
- 
-        return view('livewire.admin.dashboardtable', compact('datasurveis'));
+        ->orderBy($this->orderby, $this->asc);
+
     }
+
 }

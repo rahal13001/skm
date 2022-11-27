@@ -115,7 +115,20 @@
           </div>
         @endif
       </div>
-    
+    @if ($selectPage)
+    <div class="col-md-10 my-3">
+      @if ($selectAll)
+      Anda Telah Memilih <strong>Seluruh Data ({{ $datasurveis->total() }} Data)</strong>
+      <a href="#" role="button" class="badge bg-success" wire:click="selectPart" style="text-decoration: none">Pilih Yang Ditampilkan Saja</a>
+      @else
+      Anda Telah Memilih <strong>{{ count($checked) }} Data</strong>, Apakah Anda Ingin Memilih Seluruh Data <strong>({{ $datasurveis->total() }} Data)</strong> ?
+      <a href="#" role="button" class="badge bg-primary" wire:click="selectAll" style="text-decoration: none">Pilih Semua</a>
+      @endif
+    </div>
+        
+    @endif
+ 
+
     <div class="table-responsive-lg">
         <table class="table table-hover">
             <thead>
@@ -144,9 +157,14 @@
                     </td>
                     <td class="text-center">
                       <a class="btn btn-outline-primary" href="{{ route('detail', $datasurvei->id) }}"><i class="bi bi-eye-fill"></i></i></a>
+                      
+                      {{-- @if (!$checked) --}}
                       <a class="btn btn-outline-danger"
                       onclick="confirm('Apakah Yakin Ingin Menghapus Data Survei TW {{ $datasurvei->tw }} Tahun {{ $datasurvei->tahun }} Milik {{ $datasurvei->respondence->nama }}  ?')||event.stopImmediatePropagation()"
                       wire:click="deleteSatuData({{$datasurvei->id}})" ><i class="bi bi-trash-fill"></i></a>
+                          
+                      {{-- @endif --}}
+                      
                     </td>
                   </td>
                 @endforeach
