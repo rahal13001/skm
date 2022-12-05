@@ -29,6 +29,8 @@
 
 @section('body')
 
+{{-- @include('sweetalert::alert') --}}
+
   @if (session('status'))
     
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -112,8 +114,28 @@
           </div>
     
         </div>
-        {{-- form --}}
+
+          @if((new \Jenssegers\Agent\Agent())->isDesktop())
+
           <livewire:survei></livewire:survei>
+
+          @endif
+
+          
+          @if((new \Jenssegers\Agent\Agent())->isTablet())
+
+          <livewire:survei></livewire:survei>
+
+          @endif
+            
+        
+          @if((new \Jenssegers\Agent\Agent())->isMobile())
+
+          @livewire('surveimobile')
+
+          @endif
+        {{-- form --}}
+         
         {{-- akhir form --}}
       </div>
     </section><!-- End About Section -->
@@ -124,60 +146,11 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> --}}
  
   @livewireScripts
+  <script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
  <script>
-  // script untuk kerjaan lainnya
-  //   const lainnya = document.getElementsByClassName('other');
-  //   const input_lainnya = document.getElementById('input_lainnya');
 
-  //   lainnya.addEventListener('click', function(e){
-
-  //         if (e.target.id == "lainnya") {
-  //         input_lainnya.style.display="block";
-  //         }
-  //         else if(e.target.id == 'input_lainnya'){
-  //           input_lainnya.style.display="block";
-  //         }
-  //         else{
-  //           input_lainnya.style.display="none";
-  //           input_lainnya.value="";
-  //         }
-
-    // })
-
-
-    // $function(function(){
-    //   const $sections = $('.form-section');
-
-    //   function navigateTo(index){
-    //     $sections.removeClass('current').eq(index).addClass('current');
-    //     $('#sebelum').toggle(index>0);
-    //     const akhir = index >= $sections.length -1;
-    //     $('#lanjut').toggle(!akhir);
-    //     $('#kirim').toggle(akhir);
-    //   }
-
-    //   function currentIndex(){
-    //     return $sections.index($sections.filter('.current'));
-    //   }
-
-    //   $('#sebelum').click(function(){
-    //     navigateTo(currentIndex()-1);
-    //   });
-
-    //   $('#lanjut').click(function(){
-    //     $('.form-survei').parsley().whenValidate((
-    //       group: 'block-' + curIndex()
-    //     )).done(function(){
-    //       navigateTo(curIndex()+1);
-    //     });
-    //   });
-
-    //   $sections.each(function(index, section){
-    //     $(section).find(':input').attr('data-parsley-group', 'block'+index);
-    //   });
-
-    //   navigateTo(0);
-
-    // });
+    window.addEventListener('swal:modal',function (e) {
+      Swal.fire(e.detail);
+    });
   </script>
 @endsection

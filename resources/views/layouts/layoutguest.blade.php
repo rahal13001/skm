@@ -44,10 +44,13 @@
 </head>
 
 <body>
+  
 
 @push('script')
   
 @endpush
+
+@include('sweetalert::alert')
 
  @yield('body')
 

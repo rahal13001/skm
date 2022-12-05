@@ -28,4 +28,16 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get("/pdf/{id}/{nama}", [DatasurveisController::class, 'pdf'])->name('pdf');
+Route::get("/tambahdanaturwaktu", [DatasurveisController::class, 'twdantahun'])->name('twdantahun');
+
+// Route::get('detect', function()
+// {
+//     $agent = new \Jenssegers\Agent\Agent;
+   
+//     $result = $agent->isMobile();
+    
+//     dd($result);
+// });
+
 require __DIR__.'/auth.php';

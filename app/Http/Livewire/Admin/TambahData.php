@@ -1,23 +1,19 @@
 <?php
 
-namespace App\Http\Livewire;
-
-use App\Jobs\HasilsurveiJob;
+namespace App\Http\Livewire\Admin;
 
 use App\Models\Datasurvei;
 use App\Models\Respondence;
 use App\Models\Twandyear;
-
 use Livewire\Component;
 
-
-use function PHPSTORM_META\type;
-
-class Survei extends Component
+class TambahData extends Component
 {
-
+    
     public $currentStep = 1;
-    public $nama, $badan_usaha, $jk, $pekerjaan, $domisili, $email, $p1_, $p2_, $p3_, $p4_,$p5_, $p6_,$p7_, $p8_,$p9_, $p10_, $p11_, $p12_, $p13_, $p14_,$p15_, $p16_,$p17_, $p18_,$p19_, $p20_, $saran, $tw;
+    public $nama, $badan_usaha, $jk, $pekerjaan, $domisili, $email, $p1_, $p2_, $p3_,
+    $p4_,$p5_, $p6_,$p7_, $p8_,$p9_, $p10_, $p11_, $p12_, $p13_, $p14_,$p15_,
+    $p16_,$p17_, $p18_,$p19_, $p20_, $saran, $tw, $tahun;
     public $successMessage = '';
 
     public function datadiriklik(){
@@ -32,6 +28,8 @@ class Survei extends Component
             'jk' => 'required',
             'domisili' => 'required',
             'email' => 'required|email',
+            'tw' => 'required',
+            'tahun' => 'required|numeric|digits:4',
         ], [
 
         'nama.required' => 'Kolom Nama Wajib Diisi',
@@ -41,6 +39,10 @@ class Survei extends Component
         'domisili.required' => 'Kolom Kota/Kabupaten Domisili Wajib Diisi',
         'email.required' => 'Kolom Email Wajib Diisi',
         'email.email' => 'Mohon Masukan Alamat Email Anda Dengan Benar',
+        'tw.required' => 'Kolom Triwulan Wajib Diisi',
+        'tahun.required' => 'Kolom Tahun Wajib Diisi',
+        'tahun.numeric' => 'Isikan Angka Tahun misal : 2022',
+        'tahun.digits' => 'Isikan 4 Digit Angka Tahun Misal : 2022',
 
         ]);
         
@@ -167,11 +169,10 @@ class Survei extends Component
 
     public function submit()
     {        
-        $tw = Twandyear::where('id','1')->first();
 
         $survei = New Datasurvei();
-        $survei->tw = $tw->tw;
-        $survei->tahun = $tw->tahun;
+        $survei->tw = $this->tw;
+        $survei->tahun = $this->tahun;
         $survei->p1_ = $this->p1_;
         $survei->p2_ = $this->p2_;
         $survei->p3_ = $this->p3_;
@@ -209,24 +210,10 @@ class Survei extends Component
         $respondence->save();
 
         
-        // $this->successMessage = 'Data Berhasil Terekam';
-        // $this-> alert('success', 
-        //     'Berhasil', [
-        //         'position' => 'center',
-        //         'timer' => 3000,
-        //         'toast' => false,
-        //         'showConfirmButton' => true,
-        //         'onConfirmed' => '',
-        //         'timerProgressBar' => true,
-        //         'confirmButtonText' => 'Oke',
-        //         'text' => 'Terimakasih Telah Berpartisipasi'
-        //     ]
-        // );
-
         $this->dispatchBrowserEvent('swal:modal', [
             'icon' => 'success',
             'title' => 'Data Berhasil Terekam',
-            'text' => 'Terimakasih Telah Berpartisipasi, Cek Email Untuk Melihat Hasil Penilaian Anda',
+            'text' => 'Terimakasih Telah Berpartisipasi',
             'timer' => 5000,
             'timerProgressBar' => true,
         ]);
@@ -234,13 +221,13 @@ class Survei extends Component
         $this->clearForm();
         $this->currentStep = 1;
 
-        $datasurvei = Datasurvei::with('respondence')->whereKey($survei->id)->first();
-        dispatch(new HasilsurveiJob($datasurvei));
     }
 
     public function clearForm()
     {
         $this->nama = '';
+        $this->tw = '';
+        $this->tahun = '';
         $this->domisili = '';
         $this->jk = '';
         $this->email = '';
@@ -270,10 +257,10 @@ class Survei extends Component
 
     }
 
+
     
     public function render()
     {
-        return view('livewire.survei');
+        return view('livewire.admin.tambah-data');
     }
-
 }

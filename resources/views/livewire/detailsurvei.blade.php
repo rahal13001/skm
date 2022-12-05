@@ -163,11 +163,14 @@
                   </div>
                 
               <div class="mt-5 row">
-                <div class="text-center col-md-8">
+                <div class="text-center col-md-4">
                   <button class="btn btn-primary" wire:click="datadiri" type="button">Selanjutnya</button>
                 </div>
                 <div class="col-md-4 text-end">
                   <a class="btn btn-warning" type="button" href="{{ route('dashboard') }}">Kembali Ke Dashboard</a>
+                </div>
+                <div class="col-md-4 text-end">
+                  <a class="btn btn-info" type="button" href="{{ route('pdf', [$id_survei, $nama]) }}">Ekspor PDF</a>
                 </div>
               </div>
              </div>
@@ -266,16 +269,20 @@
                           </div>
 
                           <div class="mt-5 row">
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                               <button class="btn btn-danger" type="button" wire:click="back(1)">Kembali</button>
 
                             </div>
-                            <div class="text-center col-md-4">
+                            <div class="text-center col-md-3">
                               <button class="btn btn-primary" wire:click="u1" type="button">Selanjutnya</button>
                             </div>
 
-                            <div class="col-md-4 text-end">
+                            <div class="col-md-3 text-end">
                               <a class="btn btn-warning" type="button" href="{{ route('dashboard') }}">Kembali Ke Dashboard</a>
+                            </div>
+
+                            <div class="col-md-3 text-end">
+                              <a class="btn btn-info" type="button" href="{{ route('pdf', [$id_survei, $nama]) }}">Ekspor PDF</a>
                             </div>
                           </div>
                           
@@ -425,15 +432,18 @@
                     </div>
 
                     <div class="mt-5 row">
-                      <div class="col-md-4">
+                      <div class="col-md-3">
                         <button class="btn btn-danger" type="button" wire:click="back(3)">Kembali</button>
 
                       </div>
-                      <div class="text-center col-md-4">
+                      <div class="text-center col-md-3">
                         <button class="btn btn-primary" wire:click="u3" type="button">Selanjutnya</button>
                       </div>
-                      <div class="col-md-4 text-end">
+                      <div class="col-md-3 text-end">
                         <a class="btn btn-warning" type="button" href="{{ route('dashboard') }}">Kembali Ke Dashboard</a>
+                      </div>
+                      <div class="col-md-3 text-end">
+                        <a class="btn btn-info" type="button" href="{{ route('pdf', [$id_survei, $nama]) }}">Ekspor PDF</a>
                       </div>
                     </div>
 
@@ -505,16 +515,20 @@
                       </div>                     
                       
                       <div class="mt-5 row">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                           <button class="btn btn-danger" type="button" wire:click="back(3)">Kembali</button>
 
                         </div>
-                        <div class="text-center col-md-4">
+                        <div class="text-center col-md-3">
                           <button class="btn btn-primary" wire:click="u4" type="button">Selanjutnya</button>
                         </div>
 
-                        <div class="col-md-4 text-end">
+                        <div class="col-md-3 text-end">
                           <a class="btn btn-warning" type="button" href="{{ route('dashboard') }}">Kembali Ke Dashboard</a>
+                        </div>
+
+                        <div class="col-md-3 text-end">
+                          <a class="btn btn-info" type="button" href="{{ route('pdf', [$id_survei, $nama]) }}">Ekspor PDF</a>
                         </div>
                       </div>
 
@@ -585,16 +599,19 @@
                     </div>
 
                     <div class="mt-5 row">
-                      <div class="col-md-4">
+                      <div class="col-md-3">
                         <button class="btn btn-danger" type="button" wire:click="back(5)">Kembali</button>
 
                       </div>
-                      <div class="text-center col-md-4">
+                      <div class="text-center col-md-3">
                         <button class="btn btn-primary" wire:click="u5" type="button">Selanjutnya</button>
                       </div>
 
-                      <div class="col-md-4 text-end">
+                      <div class="col-md-3 text-end">
                         <a class="btn btn-warning" type="button" href="{{ route('dashboard') }}">Kembali Ke Dashboard</a>
+                      </div>
+                      <div class="col-md-3 text-end">
+                        <a class="btn btn-info" type="button" href="{{ route('pdf', [$id_survei, $nama]) }}">Ekspor PDF</a>
                       </div>
                     </div>
                   </div>
@@ -667,16 +684,20 @@
                       </div>
                         
                       <div class="mt-5 row">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                           <button class="btn btn-danger" type="button" wire:click="back(6)">Kembali</button>
 
                         </div>
-                        <div class="text-center col-md-4">
+                        <div class="text-center col-md-3">
                           <button class="btn btn-primary" wire:click="u6" type="button">Selanjutnya</button>
                         </div>
 
-                        <div class="col-md-4 text-end">
+                        <div class="col-md-3 text-end">
                           <a class="btn btn-warning" type="button" href="{{ route('dashboard') }}">Kembali Ke Dashboard</a>
+                        </div>
+
+                        <div class="col-md-3 text-end">
+                          <a class="btn btn-info" type="button" href="{{ route('pdf', [$id_survei, $nama]) }}">Ekspor PDF</a>
                         </div>
                       </div>
                     </div>
@@ -715,15 +736,18 @@
                         </div>
 
                         <div class="mt-5 row">
-                          <div class="col-md-4">
+                          <div class="col-md-3">
                             <button class="btn btn-danger" type="button" wire:click="back(7)">Kembali</button>
   
                           </div>
-                          <div class="text-center col-md-4">
+                          <div class="text-center col-md-3">
                             <button class="btn btn-primary" wire:click="u7" type="button">Selanjutnya</button>
                           </div>
-                          <div class="col-md-4 text-end">
+                          <div class="col-md-3 text-end">
                             <a class="btn btn-warning" type="button" href="{{ route('dashboard') }}">Kembali Ke Dashboard</a>
+                          </div>
+                          <div class="col-md-3 text-end">
+                            <a class="btn btn-info" type="button" href="{{ route('pdf', [$id_survei, $nama]) }}">Ekspor PDF</a>
                           </div>
                         </div>
 
@@ -794,15 +818,18 @@
                         </div>
 
                         <div class="mt-5 row">
-                          <div class="col-md-4">
+                          <div class="col-md-3">
                             <button class="btn btn-danger" type="button" wire:click="back(8)">Kembali</button>
 
                           </div>
-                          <div class="text-center col-md-4">
+                          <div class="text-center col-md-3">
                             <button class="btn btn-primary" wire:click="u8" type="button">Selanjutnya</button>
                           </div>
-                          <div class="col-md-4 text-end">
+                          <div class="col-md-3 text-end">
                             <a class="btn btn-warning" type="button" href="{{ route('dashboard') }}">Kembali Ke Dashboard</a>
+                          </div>
+                          <div class="col-md-3 text-end">
+                            <a class="btn btn-info" type="button" href="{{ route('pdf', [$id_survei, $nama]) }}">Ekspor PDF</a>
                           </div>
                         </div>
                       </div>
@@ -931,16 +958,19 @@
                           </div>
 
                           <div class="mt-5 row">
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                               <button class="btn btn-danger" type="button" wire:click="back(9)">Kembali</button>
 
                             </div>
-                            <div class="text-center col-md-4">
+                            <div class="text-center col-md-3">
                               <button class="btn btn-primary" wire:click="u9" type="button">Selanjutnya</button>
                             </div>
 
-                            <div class="col-md-4 text-end">
+                            <div class="col-md-3 text-end">
                               <a class="btn btn-warning" type="button" href="{{ route('dashboard') }}">Kembali Ke Dashboard</a>
+                            </div>
+                            <div class="col-md-3 text-end">
+                              <a class="btn btn-info" type="button" href="{{ route('pdf', [$id_survei, $nama]) }}">Ekspor PDF</a>
                             </div>
                           </div>
                          </div>
@@ -957,16 +987,19 @@
                             </div>
 
                             <div class="mt-5 row">
-                              <div class="col-md-4">
+                              <div class="col-md-3">
                                 <button class="btn btn-danger" type="button" wire:click="back(10)">Kembali</button>
 
                               </div>
-                              <div class="text-center col-md-4">
+                              <div class="text-center col-md-3">
                                 <button class="btn btn-primary" wire:click="submit" type="submit" style="display:{{ $edit_toggle != true ? "none" : "" }}">Edit</button>
                               </div>
 
-                              <div class="col-md-4 text-end">
+                              <div class="col-md-3 text-end">
                                 <a class="btn btn-warning" type="button" href="{{ route('dashboard') }}">Kembali Ke Dashboard</a>
+                              </div>
+                              <div class="col-md-3 text-end">
+                                <a class="btn btn-info" type="button" href="{{ route('pdf', [$id_survei, $nama]) }}">Ekspor PDF</a>
                               </div>
                             </div>
                      

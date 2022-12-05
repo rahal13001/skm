@@ -32,6 +32,7 @@
 
 </head> 
 <body class="app">   
+  @include('sweetalert::alert')
 
             @yield('body')
         

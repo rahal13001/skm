@@ -10,10 +10,7 @@ use App\Models\Twandyear;
 
 use Livewire\Component;
 
-
-use function PHPSTORM_META\type;
-
-class Survei extends Component
+class Surveimobile extends Component
 {
 
     public $currentStep = 1;
@@ -269,11 +266,9 @@ class Survei extends Component
         $this->saran_ = '';
 
     }
-
     
     public function render()
     {
-        return view('livewire.survei');
+        return view('livewire.surveimobile');
     }
-
 }

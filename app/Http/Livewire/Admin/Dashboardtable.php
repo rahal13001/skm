@@ -26,8 +26,8 @@ class Dashboardtable extends Component
     public $cari = "";
     public $drnilai = "";
     public $kenilai = "";
-    public $orderby = "id";
-    public $asc = "ASC";
+    public $orderby = "created_at";
+    public $asc = "DESC";
     public $selectPage= false;
     public $selectAll=false;
  
