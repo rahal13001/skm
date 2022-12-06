@@ -385,7 +385,7 @@
                           </div>
                           <div class="form-check form-check-inline text-center">
                             <label class="form-check-label labelradio " for="p7_4">4<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p7_" id="p7_4" value="4" {{{ $p7_ == '4i' ? "checked" : "" }}}></label>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p7_" id="p7_4" value="4" {{{ $p7_ == '4' ? "checked" : "" }}}></label>
                           </div>
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Sangat Mampu</label>

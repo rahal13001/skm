@@ -226,7 +226,7 @@ class Survei extends Component
         $this->dispatchBrowserEvent('swal:modal', [
             'icon' => 'success',
             'title' => 'Data Berhasil Terekam',
-            'text' => 'Terimakasih Telah Berpartisipasi, Cek Email Untuk Melihat Hasil Penilaian Anda',
+            'text' => 'Terimakasih Telah Berpartisipasi',
             'timer' => 5000,
             'timerProgressBar' => true,
         ]);
