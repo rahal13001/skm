@@ -6,7 +6,9 @@
             </a>
         </x-slot>
 
-        <form method="POST" action="{{ route('register') }}">
+        Hubungi Admin Untuk Registrasi
+
+        {{-- <form method="POST" action="{{ route('register') }}">
             @csrf
 
             <!-- Name -->
@@ -59,6 +61,6 @@
                     {{ __('Register') }}
                 </x-primary-button>
             </div>
-        </form>
+        </form> --}}
     </x-auth-card>
 </x-guest-layout>

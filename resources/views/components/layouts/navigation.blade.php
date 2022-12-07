@@ -101,7 +101,7 @@
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 
  
-                <a class="nav-link {{ Request::is('/dashboard') ? 'active' : '' }}" href="{{ url('/dashboard') }}">
+                <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" href="{{ url('/dashboard') }}">
                   <span class="nav-icon">
                     <svg
                       width="1em"
@@ -127,7 +127,7 @@
               <!--//nav-item-->
               <li class="nav-item">
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                <a class="nav-link {{ Request::is('5w1h/pengikut') ? 'active' : '' }}" href="{{ url('twntahun') }}">
+                <a class="nav-link {{ Request::is('tambahdanaturwaktu') ? 'active' : '' }}" href="{{ url('tambahdanaturwaktu') }}">
                   <span class="nav-icon">
                     <svg
                       width="1em"
@@ -146,7 +146,7 @@
                       />
                     </svg>
                   </span>
-                  <span class="nav-link-text">Tahun dan TW</span> </a
+                  <span class="nav-link-text">Tambah Atau Atur Waktu</span> </a
                 ><!--//nav-link-->
               </li>
               <!--//nav-item-->

@@ -23,13 +23,18 @@ Route::get('/detail/{datasurvei}', [DatasurveisController::class, 'detail'])->na
 //     return view('user.index');
 // })->name('kirim');
 
+Route::middleware('auth')->group(function(){
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('dashboard');
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    Route::get("/tambahdanaturwaktu", [DatasurveisController::class, 'twdantahun'])->name('twdantahun');
+
+});
+
+
 
 Route::get("/pdf/{id}/{nama}", [DatasurveisController::class, 'pdf'])->name('pdf');
-Route::get("/tambahdanaturwaktu", [DatasurveisController::class, 'twdantahun'])->name('twdantahun');
 
 // Route::get('detect', function()
 // {
