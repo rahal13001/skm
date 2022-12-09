@@ -223,7 +223,7 @@ class Surveimobile extends Component
         $this->dispatchBrowserEvent('swal:modal', [
             'icon' => 'success',
             'title' => 'Data Berhasil Terekam',
-            'text' => 'Terimakasih Telah Berpartisipasi',
+            'text' => 'Terimakasih Telah Berpartisipasi, Silahkan Cek Email Anda Untuk Melihat Hasil',
             'timer' => 5000,
             'timerProgressBar' => true,
         ]);
