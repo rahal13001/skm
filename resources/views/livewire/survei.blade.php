@@ -581,7 +581,7 @@
                               <input class="form-check-input mx-auto" type="radio" wire:model="p12_" id="p12_2" value="2" {{{ $p12_ == '2' ? "checked" : "" }}}></label>
                             </div>
                             <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p12_5">3<br>
+                              <label class="form-check-label labelradio " for="p12_3">3<br>
                               <input class="form-check-input mx-auto" type="radio" wire:model="p12_" id="p12_3" value="3" {{{ $p12_ == '3' ? "checked" : "" }}}></label>
                             </div>
                             <div class="form-check form-check-inline text-center">

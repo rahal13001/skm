@@ -152,5 +152,6 @@
     window.addEventListener('swal:modal',function (e) {
       Swal.fire(e.detail);
     });
+
   </script>
 @endsection

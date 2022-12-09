@@ -158,7 +158,7 @@
                       <div class="mt-2" id="p1_">
                         <label>Tidak Sesuai</label>
                           <div class="form-check">
-                              <input class="form-check-input " type="radio" wire:model="p1_" id="p1_1" value="1" {{{ $p1_ == '1' ? "checked" : "" }}}></label>
+                              <input autofocus class="form-check-input" type="radio" wire:model="p1_" id="p1_1" value="1" {{{ $p1_ == '1' ? "checked" : "" }}}></label>
                               <label class="form-check-label " for="p1_1">1
                           </div>
                           <div class="form-check">
@@ -185,7 +185,7 @@
                         <div class="mt-2" id="p2_">
                             <label>Tidak Tersedia</label>
                               <div class="form-check">
-                                  <input autofocus class="form-check-input " type="radio" wire:model="p2_" id="p2_1" value="1" {{{ $p2_ == '1' ? "checked" : "" }}}></label>
+                                  <input  class="form-check-input" type="radio" wire:model="p2_" id="p2_1" value="1" {{{ $p2_ == '1' ? "checked" : "" }}}></label>
                                   <label class="form-check-label " for="p2_1">1
                               </div>
                               <div class="form-check">
@@ -253,7 +253,7 @@
                         <div class="mt-2" id="p4_">
                             <label>Tidak Mudah</label>
                               <div class="form-check">
-                                  <input  autofocus class="form-check-input " type="radio" wire:model="p4_" id="p4_1" value="1" {{{ $p4_ == '1' ? "checked" : "" }}}></label>
+                                  <input autofocus  class="form-check-input autofocus" type="radio" wire:model="p4_" id="p4_1" value="1" {{{ $p4_ == '1' ? "checked" : "" }}}></label>
                                   <label class="form-check-label " for="p4_1">1
                               </div>
                               <div class="form-check">
@@ -319,7 +319,7 @@
                         <div class="mt-2" id="p6_">
                             <label>Tidak Mampu</label>
                               <div class="form-check">
-                                  <input  autofocus class="form-check-input " type="radio" wire:model="p6_" id="p6_1" value="1" {{{ $p6_ == '1' ? "checked" : "" }}}></label>
+                                  <input  autofocus class="form-check-input autofocus" type="radio" wire:model="p6_" id="p6_1" value="1" {{{ $p6_ == '1' ? "checked" : "" }}}></label>
                                   <label class="form-check-label " for="p6_1">1
                               </div>
                               <div class="form-check">
@@ -346,7 +346,7 @@
                         <div class="mt-2" id="p7_">
                             <label>Tidak Mampu</label>
                               <div class="form-check">
-                                  <input  autofocus class="form-check-input " type="radio" wire:model="p7_" id="p7_1" value="1" {{{ $p7_ == '1' ? "checked" : "" }}}></label>
+                                  <input   class="form-check-input " type="radio" wire:model="p7_" id="p7_1" value="1" {{{ $p7_ == '1' ? "checked" : "" }}}></label>
                                   <label class="form-check-label " for="p7_1">1
                               </div>
                               <div class="form-check">
@@ -387,7 +387,7 @@
                           <div class="mt-2" id="p8_">
                             <label>Tidak Cepat</label>
                               <div class="form-check">
-                                  <input  autofocus class="form-check-input " type="radio" wire:model="p8_" id="p8_1" value="1" {{{ $p8_ == '1' ? "checked" : "" }}}></label>
+                                  <input autofocus  class="form-check-input autofocus" type="radio" wire:model="p8_" id="p8_1" value="1" {{{ $p8_ == '1' ? "checked" : "" }}}></label>
                                   <label class="form-check-label " for="p8_1">1
                               </div>
                               <div class="form-check">
@@ -454,7 +454,7 @@
                         <div class="mt-2" id="p10_">
                             <label>Tidak Sesuai</label>
                               <div class="form-check">
-                                  <input  autofocus class="form-check-input " type="radio" wire:model="p10_" id="p10_1" value="1" {{{ $p10_ == '1' ? "checked" : "" }}}></label>
+                                  <input  autofocus class="form-check-input autofocus" type="radio" wire:model="p10_" id="p10_1" value="1" {{{ $p10_ == '1' ? "checked" : "" }}}></label>
                                   <label class="form-check-label " for="p10_1">1
                               </div>
                               <div class="form-check">
@@ -523,7 +523,7 @@
                           <div class="mt-2" id="p12_">
                             <label>Tidak Ramah dan Tidak Sopan</label>
                               <div class="form-check">
-                                  <input  autofocus class="form-check-input " type="radio" wire:model="p12_" id="p12_1" value="1" {{{ $p12_ == '1' ? "checked" : "" }}}></label>
+                                  <input autofocus  class="form-check-input autofocus" type="radio" wire:model="p12_" id="p12_1" value="1" {{{ $p12_ == '1' ? "checked" : "" }}}></label>
                                   <label class="form-check-label " for="p12_1">1
                               </div>
                               <div class="form-check">
@@ -588,7 +588,7 @@
                             <div class="mt-2" id="p14_">
                                 <label>Tidak Murah</label>
                                   <div class="form-check">
-                                      <input  autofocus class="form-check-input " type="radio" wire:model="p14_" id="p14_1" value="1" {{{ $p14_ == '1' ? "checked" : "" }}}></label>
+                                      <input autofocus  class="form-check-input autofocus" type="radio" wire:model="p14_" id="p14_1" value="1" {{{ $p14_ == '1' ? "checked" : "" }}}></label>
                                       <label class="form-check-label " for="p14_1">1
                                   </div>
                                   <div class="form-check">
@@ -628,7 +628,7 @@
                             <div class="mt-2" id="p15_">
                                 <label>Tidak Baik</label>
                                   <div class="form-check">
-                                      <input  autofocus class="form-check-input " type="radio" wire:model="p15_" id="p15_1" value="1" {{{ $p15_ == '1' ? "checked" : "" }}}></label>
+                                      <input   class="form-check-input autofocus" type="radio" wire:model="p15_" id="p15_1" value="1" {{{ $p15_ == '1' ? "checked" : "" }}}></label>
                                       <label class="form-check-label " for="p15_1">1
                                   </div>
                                   <div class="form-check">
@@ -694,7 +694,7 @@
                             <div class="mt-2" id="p17_">
                                 <label>Tidak Baik</label>
                                   <div class="form-check">
-                                      <input  autofocus class="form-check-input " type="radio" wire:model="p17_" id="p17_1" value="1" {{{ $p17_ == '1' ? "checked" : "" }}}></label>
+                                      <input autofocus  class="form-check-input autofocus" type="radio" wire:model="p17_" id="p17_1" value="1" {{{ $p17_ == '1' ? "checked" : "" }}}></label>
                                       <label class="form-check-label " for="p17_1">1
                                   </div>
                                   <div class="form-check">
@@ -810,7 +810,7 @@
                            {{-- Pertanyaan 3 --}}
                               <div class="row mt-5">
                                 <label for="saran">Kritik dan Saran</label>
-                                <textarea  autofocus wire:model="saran" id="saran" cols="30" rows="10" class="form-control" placeholder="Masukan Kritik dan Saran Anda Untuk Pelayanan Yang Lebih Baik"></textarea>
+                                <textarea   wire:model="saran" id="saran" cols="30" rows="10" class="form-control" placeholder="Masukan Kritik dan Saran Anda Untuk Pelayanan Yang Lebih Baik"></textarea>
                               </div>
   
                               <div class="mt-5 row">
@@ -822,22 +822,7 @@
                        
                         </div>
   
-                        {{-- <div class="form-navigation mt-5 text-center">
-                          <div class="row">
-                            <div class="col-md-4">
-                              <button type="button" class="btn btn-outline-danger previous mr-5" id="sebelum">Sebelumnya</button>
-                            </div>
-                            <div class="col-md-4">
-                              <button type="submit" class="btn btn-outline-primary submit" id="kirim">Kirim</button>
-                            </div>
-                            <div class="col-md-4">
-                              <button type="button" class="btn btn-outline-success next ml-5" id="lanjut">Selanjutnya</button>
-                            </div>
-                          </div>
-                        </div> --}}
-  
-              {{-- </form> --}}
-  
+         
             </div>
         
         </div>

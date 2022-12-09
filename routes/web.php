@@ -23,6 +23,10 @@ Route::get('/detail/{datasurvei}', [DatasurveisController::class, 'detail'])->na
 //     return view('user.index');
 // })->name('kirim');
 
+Route::get('/email', function () {
+    return view('email.konfirmasi3');
+})->name('kirim');
+
 Route::middleware('auth')->group(function(){
     Route::get('/dashboard', function () {
         return view('admin.dashboard');

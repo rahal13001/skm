@@ -3,11 +3,12 @@
 namespace App\Http\Livewire;
 
 use App\Jobs\HasilsurveiJob;
-
+use App\Mail\HasilsurveiEmail;
 use App\Models\Datasurvei;
 use App\Models\Respondence;
 use App\Models\Twandyear;
-
+use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 
 
@@ -23,6 +24,8 @@ class Survei extends Component
     public function datadiriklik(){
            $this->currentStep = 1;
     }
+
+    // private $apikey = 'bdfeb6d05d5431688faf8fe3a04dd962-bdb2c8b4-eb90d1c6';
 
     public function datadiri(){
         $validatedData = $this->validate([
@@ -208,25 +211,11 @@ class Survei extends Component
         $respondence->pekerjaan = $this->pekerjaan;
         $respondence->save();
 
-        
-        // $this->successMessage = 'Data Berhasil Terekam';
-        // $this-> alert('success', 
-        //     'Berhasil', [
-        //         'position' => 'center',
-        //         'timer' => 3000,
-        //         'toast' => false,
-        //         'showConfirmButton' => true,
-        //         'onConfirmed' => '',
-        //         'timerProgressBar' => true,
-        //         'confirmButtonText' => 'Oke',
-        //         'text' => 'Terimakasih Telah Berpartisipasi'
-        //     ]
-        // );
 
         $this->dispatchBrowserEvent('swal:modal', [
             'icon' => 'success',
             'title' => 'Data Berhasil Terekam',
-            'text' => 'Terimakasih Telah Berpartisipasi',
+            'text' => 'Terimakasih Telah Berpartisipasi, Cek Email Anda Untuk Melihat Hasil Survei',
             'timer' => 5000,
             'timerProgressBar' => true,
         ]);
@@ -235,6 +224,8 @@ class Survei extends Component
         $this->currentStep = 1;
 
         $datasurvei = Datasurvei::with('respondence')->whereKey($survei->id)->first();
+          
+        // MAIL::to($datasurvei->respondence->email)->send(new HasilsurveiEmail($datasurvei));
         dispatch(new HasilsurveiJob($datasurvei));
     }
 
