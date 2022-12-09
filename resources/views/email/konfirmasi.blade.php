@@ -66,7 +66,7 @@
             			<div class="text" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: white; padding: 0 4em; text-align: center;">
             				<h2 style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-family: 'Work Sans', sans-serif; margin-top: 0; color: white; font-size: 50px; margin-bottom: 0; font-weight: 300; line-height: 1;">Berusaha Memberi Yang Terbaik</h2>
             				<p style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">Survei Kepuasan Masyarakat Triwulan {{ $triwulan }} Tahun {{ $tahun }} </p>
-            				<p style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"><a href="skm.timurbersinar.com/{{ $dataid }}/{{ $nama }}" class="btn btn-primary" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; text-decoration: none; padding: 5px 15px; display: inline-block; border-radius: 30px; background: cornflowerblue; color: white;">Lihat Penilaian Anda</a></p>
+            				<p style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"><a href="http://skm.timurbersinar.com/pdf/{{ $dataid }}/{{ $nama }}" class="btn btn-primary" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; text-decoration: none; padding: 5px 15px; display: inline-block; border-radius: 30px; background: cornflowerblue; color: white;">Lihat Penilaian Anda</a></p>
             			</div>
             		</td>
             	</tr>
