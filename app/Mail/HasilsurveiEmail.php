@@ -52,7 +52,7 @@ class HasilsurveiEmail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'email.konfirmasi',
+            view: 'email.email',
             with : [
                 'nama' => $this->datasurvei->respondence->nama,
                 'dataid' => $this->datasurvei->id,
