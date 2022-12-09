@@ -39,6 +39,7 @@ Route::middleware('auth')->group(function(){
 
 
 Route::get("/pdf/{id}/{nama}", [DatasurveisController::class, 'pdf'])->name('pdf');
+Route::get("/{id}/{nama}", [DatasurveisController::class, 'pdf'])->name('pdfuser');
 
 // Route::get('detect', function()
 // {
