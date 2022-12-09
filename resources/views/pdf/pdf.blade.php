@@ -39,7 +39,7 @@
                 <tr>
                     <td>Domisili</td>
                     <td>:</td>
-                    <td>Kota Bandung</td>
+                    <td>{{ $datasurvei->respondence->domisili }}</td>
                 </tr>
                 <tr>
                     <td>Email</td>
