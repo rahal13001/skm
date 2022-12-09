@@ -57,7 +57,8 @@ class HasilsurveiEmail extends Mailable
                 'nama' => $this->datasurvei->respondence->nama,
                 'dataid' => $this->datasurvei->id,
                 'tahun' => $this->datasurvei->tahun,
-                'triwulan' => $this->datasurvei->tw
+                'triwulan' => $this->datasurvei->tw,
+                'linkpdf' => 'https://skm.timurbersinar.com/pdf'
             ]
 
 
