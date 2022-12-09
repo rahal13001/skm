@@ -53,7 +53,7 @@
     </div>
     <div class="u1">
         <p><b>Unsur 1 : Persyaratan Pelayanan</b><br>
-            <br> Bagaimana pendapat saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanan ?
+            <br> 1.1. Bagaimana pendapat saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanan ?
             <br> <b>
                 @if ($datasurvei->p1_ == 1)
                     Tidak Sesuai
@@ -64,8 +64,9 @@
                 @else
                     Sangat Sesuai
                 @endif
-            , Skor : {{ $datasurvei->p1_ }} </b><br><br>
-            Apakah informasi mengenai persyaratan pelayanan cukup tersedia baik di papan pengumuman, brosur atau sistem pelayanan online ?
+            , Skor : {{ $datasurvei->p1_ }} </b><br>
+            <br>
+            1.2. Apakah informasi mengenai persyaratan pelayanan cukup tersedia baik di papan pengumuman, brosur atau sistem pelayanan online ?
             <br> <b>
                 @if ($datasurvei->p2_ == 1)
                     Tidak Tersedia
@@ -76,8 +77,9 @@
                 @else
                     Sangat Tersedia
                 @endif
-                , Skor : {{ $datasurvei->p2_ }} </b> <br><br>
-            Apakah informasi tentang persyaratan pelayanan mudah dipahami ?
+                , Skor : {{ $datasurvei->p2_ }} </b> <br>
+                <br>
+            1.3. Apakah informasi tentang persyaratan pelayanan mudah dipahami ?
             <br> <b>
             @if ($datasurvei->p3_ == 1)
                 Tidak Mudah
@@ -88,7 +90,7 @@
             @else
                 Sangat Mudah
             @endif
-            , Skor : {{ $datasurvei->p3_ }} </b>
+            , Skor : {{ $datasurvei->p3_ }} </b> <br>
         </p>
     </div>
     
@@ -368,11 +370,126 @@
 
     <div class="saran">
         <p>
-            <b>Saran</b><br><br>
+            <b>Kritik dan Saran</b><br><br>
             {{ $datasurvei->saran }}
         </p>
     </div>
+    <div class="page-break"></div>
+   
     <div class="qr">
+        <div class="rekomendasi">
+            <h4>Rekomendasi Perbaikan Pelayanan</h4>
+          
+                <ol type="1">
+                    @if (!empty($datasurvei->sugestion->saran_1))
+                        <li>
+                            {{ $datasurvei->sugestion->saran_1 }}
+                        </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_2))
+                        <li>
+                            {{ $datasurvei->sugestion->saran_2 }}
+                        </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_3))
+                        <li>
+                            {{ $datasurvei->sugestion->saran_3 }}
+                        </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_4))
+                        <li>
+                            {{ $datasurvei->sugestion->saran_4 }}
+                        </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_5))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_5 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_6))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_6 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_7))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_7 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_8))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_8 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_8))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_8 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_9))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_9 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_10))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_10 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_11))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_11 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_12))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_12 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_13))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_13 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_14))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_14 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_15))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_15 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_16))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_16 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_17))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_17 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_18))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_18 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_19))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_19 }}
+                    </li>
+                    @endif
+                    @if (!empty($datasurvei->sugestion->saran_20))
+                    <li>
+                        {{ $datasurvei->sugestion->saran_20 }}
+                    </li>
+                    @endif
+    
+                </ol>
+            
+        </div>
     <table>
         <tr>
             <td><h3>Total Skor : {{ $datasurvei->total }}</h3></td>

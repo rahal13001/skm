@@ -41,13 +41,4 @@ Route::middleware('auth')->group(function(){
 Route::get("/pdf/{id}/{nama}", [DatasurveisController::class, 'pdf'])->name('pdf');
 Route::get("/{dataid}/{nama}", [DatasurveisController::class, 'pdfuser'])->name('pdfuser');
 
-// Route::get('detect', function()
-// {
-//     $agent = new \Jenssegers\Agent\Agent;
-   
-//     $result = $agent->isMobile();
-    
-//     dd($result);
-// });
-
 require __DIR__.'/auth.php';

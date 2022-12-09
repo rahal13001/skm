@@ -176,6 +176,12 @@
                         
                           <label>Sangat Sesuai</label>
                       </div>
+                      @if ($p1_ == 1 || $p1_ == 2)
+                      <div class="mt-2">
+                        <label for="domisili">Rekomendasi Perbaikan</label>
+                        <input type="saran1" wire:model="saran1" class="form-control {{$errors->first('saran1') ? "is-invalid" : "" }}" id="saran1" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                      </div>
+                      @endif
                       @error('p1_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                     </div>
                     {{-- <input disabled value="{{ $respondence->id }}" wire:model="respondence" hidden> --}}
@@ -203,6 +209,12 @@
                             
                               <label>Sangat Tersedia</label>
                           </div>
+                          @if ($p2_ == 1 || $p2_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input type="saran2" wire:model="saran2" class="form-control {{$errors->first('saran2') ? "is-invalid" : "" }}" id="saran2" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                         @error('p2_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                       </div>
   
@@ -230,6 +242,12 @@
                             
                               <label>Sangat Mudah</label>
                           </div>
+                          @if ($p3_ == 1 || $p3_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input type="saran3" wire:model="saran3" class="form-control {{$errors->first('saran3') ? "is-invalid" : "" }}" id="saran3" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                               @error('p3_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                             </div>
   
@@ -271,6 +289,12 @@
                             
                               <label>Sangat Mudah</label>
                           </div>
+                          @if ($p4_ == 1 || $p4_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input type="saran4" wire:model="saran4" class="form-control {{$errors->first('saran4') ? "is-invalid" : "" }}" id="saran4" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                         @error('p4_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                       </div>
   
@@ -298,6 +322,12 @@
                             
                               <label>Sangat Sesuai</label>
                           </div>
+                          @if ($p5_ == 1 || $p5_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input type="saran5" wire:model="saran5" class="form-control {{$errors->first('saran5') ? "is-invalid" : "" }}" id="saran5" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                         @error('p5_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                       </div>
                                        
@@ -337,6 +367,12 @@
                             
                               <label>Sangat Mampu</label>
                           </div>
+                          @if ($p6_ == 1 || $p6_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input type="saran6" wire:model="saran6" class="form-control {{$errors->first('saran6') ? "is-invalid" : "" }}" id="saran6" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                         @error('p6_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                       </div>
   
@@ -364,6 +400,12 @@
                             
                               <label>Sangat Mampu</label>
                           </div>
+                          @if ($p7_ == 1 || $p7_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input type="saran7" wire:model="saran7" class="form-control {{$errors->first('saran7') ? "is-invalid" : "" }}" id="saran7" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                         @error('p7_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                       </div>
   
@@ -405,6 +447,12 @@
                             
                               <label>Sangat Cepat</label>
                           </div>
+                          @if ($p8_ == 1 || $p8_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input type="saran8" wire:model="saran8" class="form-control {{$errors->first('saran8') ? "is-invalid" : "" }}" id="saran8" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                           @error('p8_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                         </div>
   
@@ -432,6 +480,12 @@
                             
                               <label>Sangat Sesuai</label>
                           </div>
+                          @if ($p9_ == 1 || $p9_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input type="saran9" wire:model="saran9" class="form-control {{$errors->first('saran9') ? "is-invalid" : "" }}" id="saran9" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                           @error('p9_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                         </div>                     
                         
@@ -472,6 +526,12 @@
                             
                               <label>Sangat Sesuai</label>
                           </div>
+                          @if ($p10_ == 1 || $p10_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input type="saran10" wire:model="saran10" class="form-control {{$errors->first('saran10') ? "is-invalid" : "" }}" id="saran10" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                         @error('p10_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                       </div>
   
@@ -499,6 +559,12 @@
                             
                               <label>Sangat Sesuai</label>
                           </div>
+                          @if ($p11_ == 1 || $p11_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input type="saran11" wire:model="saran11" class="form-control {{$errors->first('saran11') ? "is-invalid" : "" }}" id="saran11" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                         @error('p11_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                       </div>
   
@@ -541,6 +607,12 @@
                             
                               <label>Sangat Ramah dan Sopan</label>
                           </div>
+                          @if ($p12_ == 1 || $p12_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input type="saran12" wire:model="saran12" class="form-control {{$errors->first('saran12') ? "is-invalid" : "" }}" id="saran12" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                           @error('p12_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                         </div>
   
@@ -568,6 +640,12 @@
                             
                               <label>Sangat Mudah</label>
                           </div>
+                          @if ($p13_ == 1 || $p13_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input type="saran13" wire:model="saran13" class="form-control {{$errors->first('saran13') ? "is-invalid" : "" }}" id="saran13" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                           @error('p13_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                         </div>
                           
@@ -584,7 +662,7 @@
                           <div class="needs-validation" id="step5" style="display: {{ $currentStep != 8 ? 'none' : '' }}">
                             <h3 class="mb-3" >Kewajaran Biaya</h3>
                            <div class="row mt-5">
-                            <label for="p14_">Bagaimana pendapat saudara tentang biaya/tarif dalam pelayanan ? (Diluar PNBP)</label>
+                            <label for="p14_">Bagaimana pendapat saudara tentang biaya/tarif dalam pelayanan ?<b>(Bukan Tarif PNBP)</b></label>
                             <div class="mt-2" id="p14_">
                                 <label>Tidak Murah</label>
                                   <div class="form-check">
@@ -606,6 +684,12 @@
                                 
                                   <label>Sangat Murah</label>
                               </div>
+                              @if ($p14_ == 1 || $p14_ == 2)
+                              <div class="mt-2">
+                                <label for="domisili">Rekomendasi Perbaikan</label>
+                                <input type="saran14" wire:model="saran14" class="form-control {{$errors->first('saran14') ? "is-invalid" : "" }}" id="saran14" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                              </div>
+                              @endif
                             @error('p14_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                           </div>
   
@@ -646,6 +730,12 @@
                                 
                                   <label>Sangat Baik</label>
                               </div>
+                              @if ($p15_ == 1 || $p15_ == 2)
+                              <div class="mt-2">
+                                <label for="domisili">Rekomendasi Perbaikan</label>
+                                <input type="saran15" wire:model="saran15" class="form-control {{$errors->first('saran15') ? "is-invalid" : "" }}" id="saran15" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                              </div>
+                              @endif
                             @error('p15_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                           </div>
   
@@ -673,6 +763,12 @@
                                 
                                   <label>Sangat Baik</label>
                               </div>
+                              @if ($p16_ == 1 || $p16_ == 2)
+                              <div class="mt-2">
+                                <label for="domisili">Rekomendasi Perbaikan</label>
+                                <input type="saran16" wire:model="saran16" class="form-control {{$errors->first('saran16') ? "is-invalid" : "" }}" id="saran16" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                              </div>
+                              @endif
                             @error('p16_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                           </div>
   
@@ -712,6 +808,12 @@
                                 
                                   <label>Sangat Baik</label>
                               </div>
+                              @if ($p17_ == 1 || $p17_ == 2)
+                              <div class="mt-2">
+                                <label for="domisili">Rekomendasi Perbaikan</label>
+                                <input type="saran17" wire:model="saran17" class="form-control {{$errors->first('saran17') ? "is-invalid" : "" }}" id="saran17" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                              </div>
+                              @endif
                               @error('p17_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                             </div>
   
@@ -739,6 +841,12 @@
                                 
                                   <label>Sangat Mudah</label>
                               </div>
+                              @if ($p18_ == 1 || $p18_ == 2)
+                              <div class="mt-2">
+                                <label for="domisili">Rekomendasi Perbaikan</label>
+                                <input type="saran18" wire:model="saran18" class="form-control {{$errors->first('saran18') ? "is-invalid" : "" }}" id="saran18" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                              </div>
+                              @endif
                               @error('p18_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                             </div>
   
@@ -766,6 +874,12 @@
                                 
                                   <label>Sangat Sesuai</label>
                               </div>
+                              @if ($p19_ == 1 || $p19_ == 2)
+                              <div class="mt-2">
+                                <label for="domisili">Rekomendasi Perbaikan</label>
+                                <input type="saran19" wire:model="saran19" class="form-control {{$errors->first('saran19') ? "is-invalid" : "" }}" id="saran19" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                              </div>
+                              @endif
                             @error('p19_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                           </div>
   
@@ -793,6 +907,12 @@
                                 
                                   <label>Sangat Dapat Memberikan Solusi</label>
                               </div>
+                              @if ($p20_ == 1 || $p20_ == 2)
+                              <div class="mt-2">
+                                <label for="domisili">Rekomendasi Perbaikan</label>
+                                <input type="saran20" wire:model="saran20" class="form-control {{$errors->first('saran20') ? "is-invalid" : "" }}" id="saran20" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                              </div>
+                              @endif
                               @error('p20_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                             </div>
   

@@ -16,6 +16,10 @@ class Datasurvei extends Model
         return $this->hasOne(Respondence::class);
     }
 
+    public function sugestion(){
+        return $this->hasOne(Sugestion::class);
+    }
+
  
     public function scopeCari($query, $term){
         $term = "%$term%";

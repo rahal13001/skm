@@ -180,7 +180,7 @@
                 <h3 class="mb-3" >Persyaratan Pelayanan</h3>
                 {{-- Pertanyaan 1 --}}
                   <div class="row mt-3">
-                    <label for="p1_">Bagaimana pendapat saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanan ?</label>
+                    <label for="p1_">1.1. Bagaimana pendapat saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanan ?</label>
                     <div class="mt-2" id="p1_">
                       <div class="form-check form-check-inline">
                         <label class="form-check-label">Tidak Sesuai</label>
@@ -204,13 +204,19 @@
                       <div class="form-check form-check-inline">
                         <label class="form-check-label">Sangat Sesuai</label>
                       </div>
+                      @if ($p1_ == 1 || $p1_ == 2)
+                      <div class="mt-2">
+                        <label for="domisili">Rekomendasi Perbaikan</label>
+                        <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran1" wire:model="saran1" class="form-control {{$errors->first('saran1') ? "is-invalid" : "" }}" id="saran1" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                      </div>
+                      @endif
                     </div>
                     @error('p1_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                   </div>
                  
                     {{-- Pertanyaan 2 --}}
                     <div class="row mt-5">
-                      <label for="p2_">Apakah informasi mengenai persyaratan pelayanan cukup tersedia baik di apan pengumuman, brosur atau sistem pelayanan online ?</label>
+                      <label for="p2_">1.2. Apakah informasi mengenai persyaratan pelayanan cukup tersedia baik di apan pengumuman, brosur atau sistem pelayanan online ?</label>
                       <div class="mt-2" id="p2_">
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Tidak Tersedia</label>
@@ -234,13 +240,19 @@
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Sangat Tersedia</label>
                         </div>
+                        @if ($p2_ == 1 || $p2_ == 2)
+                        <div class="mt-2">
+                          <label for="domisili">Rekomendasi Perbaikan</label>
+                          <input  {{ $edit_toggle != true ? "disabled" : "" }} type="saran2" wire:model="saran2" class="form-control {{$errors->first('saran2') ? "is-invalid" : "" }}" id="saran2" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                        </div>
+                        @endif
                       </div>
                       @error('p2_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                     </div>
 
                     {{-- Pertanyaan 3 --}}
                       <div class="row mt-5">
-                        <label for="p3_">Apakah informasi tentang persyaratan pelayanan mudah dipahami ?</label>
+                        <label for="p3_">1.3. Apakah informasi tentang persyaratan pelayanan mudah dipahami ?</label>
                         <div class="mt-2" id="p3_">
                           <div class="form-check form-check-inline">
                             <label class="form-check-label">Tidak Mudah</label>
@@ -264,6 +276,12 @@
                               <div class="form-check form-check-inline">
                                 <label class="form-check-label">Sangat Mudah</label>
                               </div>
+                              @if ($p3_ == 1 || $p3_ == 2)
+                              <div class="mt-2">
+                                <label for="domisili">Rekomendasi Perbaikan</label>
+                                <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran3" wire:model="saran3" class="form-control {{$errors->first('saran3') ? "is-invalid" : "" }}" id="saran3" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                              </div>
+                              @endif
                             </div>
                             @error('p3_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                           </div>
@@ -295,7 +313,7 @@
                   <h3 class="mb-3" >Prosedur Pelayanan</h3>
                     {{-- Pertanyaan 1 --}}
                     <div class="row mt-5">
-                      <label for="p4_">Bagaimana pemahaman saudara tentang kemudahan prosedur pelayanan di unit ini ?</label>
+                      <label for="p4_">2.1. Bagaimana pemahaman saudara tentang kemudahan prosedur pelayanan di unit ini ?</label>
                       <div class="mt-2" id="p4_">
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Tidak Mudah</label>
@@ -319,13 +337,19 @@
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Sangat Mudah</label>
                         </div>
+                        @if ($p4_ == 1 || $p4_ == 2)
+                        <div class="mt-2">
+                          <label for="domisili">Rekomendasi Perbaikan</label>
+                          <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran4" wire:model="saran4" class="form-control {{$errors->first('saran4') ? "is-invalid" : "" }}" id="saran4" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                        </div>
+                        @endif
                       </div>
                       @error('p4_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                     </div>
 
                       {{-- Pertanyaan 2 --}}
                     <div class="row mt-5">
-                      <label for="p5_">Apakah prosedur pengajuan permohonan sudah dijalankan sesuai SOP (Standar Operasional Prosedur) ?</label>
+                      <label for="p5_">2.2. Apakah prosedur pengajuan permohonan sudah dijalankan sesuai SOP (Standar Operasional Prosedur) ?</label>
                       <div class="mt-2" id="p5_">
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Tidak Sesuai</label>
@@ -349,6 +373,12 @@
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Sangat Sesuai</label>
                         </div>
+                        @if ($p5_ == 1 || $p5_ == 2)
+                        <div class="mt-2">
+                          <label for="domisili">Rekomendasi Perbaikan</label>
+                          <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran5" wire:model="saran5" class="form-control {{$errors->first('saran5') ? "is-invalid" : "" }}" id="saran5" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                        </div>
+                        @endif
                       </div>
                       @error('p5_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                     </div>
@@ -373,7 +403,7 @@
                     <h3 class="mb-3" >Kemampuan Petugas</h3>
                      {{-- Pertanyaan 3 --}}
                      <div class="row mt-5">
-                      <label for="p6_">Bagaimana pendapat saudara tentang kompetensi atau kemampuan petugas dalam memberikan pelayanan ?</label>
+                      <label for="p6_">3.1. Bagaimana pendapat saudara tentang kompetensi atau kemampuan petugas dalam memberikan pelayanan ?</label>
                       <div class="mt-2" id="p6_">
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Tidak Mampu</label>
@@ -397,13 +427,19 @@
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Sangat Mampu</label>
                         </div>
+                        @if ($p6_ == 1 || $p6_ == 2)
+                        <div class="mt-2">
+                          <label for="domisili">Rekomendasi Perbaikan</label>
+                          <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran6" wire:model="saran6" class="form-control {{$errors->first('saran6') ? "is-invalid" : "" }}" id="saran6" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                        </div>
+                        @endif
                       </div>
                       @error('p6_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                     </div>
 
                     {{-- Pertanyaan 4 --}}
                     <div class="row mt-5">
-                      <label for="p7_">Apakah petugas memiliki kemampuan menjalankan prosedur kepada pelanggan ?</label>
+                      <label for="p7_">3.2. Apakah petugas memiliki kemampuan menjalankan prosedur kepada pelanggan ?</label>
                       <div class="mt-2" id="p7_">
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Tidak Mampu</label>
@@ -427,6 +463,12 @@
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Sangat Mampu</label>
                         </div>
+                        @if ($p7_ == 1 || $p7_ == 2)
+                        <div class="mt-2">
+                          <label for="domisili">Rekomendasi Perbaikan</label>
+                          <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran7" wire:model="saran7" class="form-control {{$errors->first('saran7') ? "is-invalid" : "" }}" id="saran7" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                        </div>
+                        @endif
                       </div>
                       @error('p7_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                     </div>
@@ -456,7 +498,7 @@
 
                      {{-- Mulai U4 --}}
                       <div class="row mt-5">
-                        <label for="p8_">Bagaimana pendapat saudara tetang kecepatan waktu pelayanan di unit ini ?</label>
+                        <label for="p8_">4.1. Bagaimana pendapat saudara tetang kecepatan waktu pelayanan di unit ini ?</label>
                         <div class="mt-2" id="p8_">
                           <div class="form-check form-check-inline">
                             <label class="form-check-label">Tidak Cepat</label>
@@ -480,13 +522,19 @@
                           <div class="form-check form-check-inline">
                             <label class="form-check-label">Sangat Cepat</label>
                           </div>
+                          @if ($p8_ == 1 || $p8_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran8" wire:model="saran8" class="form-control {{$errors->first('saran8') ? "is-invalid" : "" }}" id="saran8" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                         </div>
                         @error('p8_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                       </div>
 
                       {{-- Pertanyaan 2 --}}
                       <div class="row mt-5">
-                        <label for="p9_">Apakah informasi waktu operasional pelayanan dan penyeesaian pelayanan sudah sesuai dengan waktu yang sudah ditetapkan ?</label>
+                        <label for="p9_">4.2. Apakah informasi waktu operasional pelayanan dan penyeesaian pelayanan sudah sesuai dengan waktu yang sudah ditetapkan ?</label>
                         <div class="mt-2" id="p9_">
                           <div class="form-check form-check-inline">
                             <label class="form-check-label">Tidak Sesuai</label>
@@ -510,6 +558,12 @@
                           <div class="form-check form-check-inline">
                             <label class="form-check-label">Sangat Sesuai</label>
                           </div>
+                          @if ($p9_ == 1 || $p9_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran9" wire:model="saran9" class="form-control {{$errors->first('saran9') ? "is-invalid" : "" }}" id="saran9" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                         </div>
                         @error('p9_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                       </div>                     
@@ -540,7 +594,7 @@
                     <h3 class="mb-3" >Produk Layanan</h3>
                     {{-- Pertanyaan 3 --}}
                     <div class="row mt-5">
-                      <label for="p10_">Bagaimana pendapat saudara tentang kesesuaian produk pelayanan atara yang tercantum dalam standar pelayanan dengan hasil yang diberikan ?</label>
+                      <label for="p10_">5.1. Bagaimana pendapat saudara tentang kesesuaian produk pelayanan atara yang tercantum dalam standar pelayanan dengan hasil yang diberikan ?</label>
                       <div class="mt-2" id="p10_">
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Tidak Sesuai</label>
@@ -564,13 +618,19 @@
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Sangat Sesuai</label>
                         </div>
+                        @if ($p10_ == 1 || $p10_ == 2)
+                        <div class="mt-2">
+                          <label for="domisili">Rekomendasi Perbaikan</label>
+                          <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran10" wire:model="saran10" class="form-control {{$errors->first('saran10') ? "is-invalid" : "" }}" id="saran10" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                        </div>
+                        @endif
                       </div>
                       @error('p10_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                     </div>
 
                     {{-- Pertanyaan 4 --}}
                     <div class="row mt-5">
-                      <label for="p11_">Apakah informasi tentang daftar produk layanan dapat diketahui dan diakses dengan baik ?</label>
+                      <label for="p11_">5.2. Apakah informasi tentang daftar produk layanan dapat diketahui dan diakses dengan baik ?</label>
                       <div class="mt-2" id="p11_">
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Tidak Baik</label>
@@ -594,6 +654,12 @@
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Sangat Baik</label>
                         </div>
+                        @if ($p11_ == 1 || $p11_ == 2)
+                        <div class="mt-2">
+                          <label for="domisili">Rekomendasi Perbaikan</label>
+                          <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran11" wire:model="saran11" class="form-control {{$errors->first('saran11') ? "is-invalid" : "" }}" id="saran11" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                        </div>
+                        @endif
                       </div>
                       @error('p11_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                     </div>
@@ -625,7 +691,7 @@
                         <h3 class="mb-3" >Kesopanan dan Keramahan Petugas</h3>
                       {{-- Pertanyaan 1 --}}
                       <div class="row mt-5">
-                        <label for="p12_">Bagaimana pendapat saudara tentang kesopanan dan keramahan petugas dalam memberikan pelayanan ?</label>
+                        <label for="p12_">6.1. Bagaimana pendapat saudara tentang kesopanan dan keramahan petugas dalam memberikan pelayanan ?</label>
                         <div class="mt-2" id="p12_">
                           <div class="form-check form-check-inline">
                             <label class="form-check-label">Tidak Sopan dan Ramah</label>
@@ -649,13 +715,19 @@
                           <div class="form-check form-check-inline">
                             <label class="form-check-label">Sangat Sopan dan Ramah</label>
                           </div>
+                          @if ($p12_ == 1 || $p12_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran12" wire:model="saran12" class="form-control {{$errors->first('saran12') ? "is-invalid" : "" }}" id="saran12" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                         </div>
                         @error('p12_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                       </div>
 
                       {{-- Pertanyaan 2 --}}
                       <div class="row mt-5">
-                        <label for="p13_">Apakah petugas pelayanan memberikan penjelasan yang mudah dan tidak berbeli-belit ?</label>
+                        <label for="p13_">6.2. Apakah petugas pelayanan memberikan penjelasan yang mudah dan tidak berbeli-belit ?</label>
                         <div class="mt-2" id="p13_">
                           <div class="form-check form-check-inline">
                             <label class="form-check-label">Tidak Mudah</label>
@@ -679,6 +751,12 @@
                           <div class="form-check form-check-inline">
                             <label class="form-check-label">Sangat Mudah</label>
                           </div>
+                          @if ($p13_ == 1 || $p13_ == 2)
+                          <div class="mt-2">
+                            <label for="domisili">Rekomendasi Perbaikan</label>
+                            <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran13" wire:model="saran13" class="form-control {{$errors->first('saran13') ? "is-invalid" : "" }}" id="saran13" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                          </div>
+                          @endif
                         </div>
                         @error('p13_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                       </div>
@@ -707,7 +785,7 @@
                         <div class="needs-validation" id="step5" style="display: {{ $currentStep != 8 ? 'none' : '' }}">
                           <h3 class="mb-3" >Kewajaran Biaya</h3>
                          <div class="row mt-5">
-                          <label for="p14_">Bagaimana pendapat saudara tentang biaya/tarif dalam pelayanan ?</label>
+                          <label for="p14_">7.1. Bagaimana pendapat saudara tentang biaya/tarif dalam pelayanan ? <b>(Bukan Tarif PNBP)</b></label>
                           <div class="mt-2" id="p14_">
                             <div class="form-check form-check-inline">
                               <label class="form-check-label">Sangat Mahal</label>
@@ -731,6 +809,12 @@
                             <div class="form-check form-check-inline">
                               <label class="form-check-label">Sangat Murah</label>
                             </div>
+                            @if ($p14_ == 1 || $p14_ == 2)
+                            <div class="mt-2">
+                              <label for="domisili">Rekomendasi Perbaikan</label>
+                              <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran14" wire:model="saran14" class="form-control {{$errors->first('saran14') ? "is-invalid" : "" }}" id="saran14" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                            </div>
+                            @endif
                           </div>
                           @error('p14_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                         </div>
@@ -759,7 +843,7 @@
                           <h3 class="mb-3" >Kualitas Sarana dan Prasarana</h3>
                          {{-- Pertanyaan 4 --}}
                          <div class="row mt-5">
-                          <label for="p15_">Bagaimana pendapat saudara tentang sarana dan prasarana pelayanan ?</label>
+                          <label for="p15_">8.1. Bagaimana pendapat saudara tentang sarana dan prasarana pelayanan ?</label>
                           <div class="mt-2" id="p15_">
                             <div class="form-check form-check-inline">
                               <label class="form-check-label">Tidak Baik</label>
@@ -783,13 +867,19 @@
                             <div class="form-check form-check-inline">
                               <label class="form-check-label">Sangat Baik</label>
                             </div>
+                            @if ($p15_ == 1 || $p15_ == 2)
+                            <div class="mt-2">
+                              <label for="domisili">Rekomendasi Perbaikan</label>
+                              <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran15" wire:model="saran15" class="form-control {{$errors->first('saran15') ? "is-invalid" : "" }}" id="saran15" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                            </div>
+                            @endif
                           </div>
                           @error('p15_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                         </div>
 
                         {{-- Pertanyaan 5 --}}
                          <div class="row mt-5">
-                          <label for="p16_">Apakah unit layanan seperti ruang tunggu, bahan bacaan, kotak saran/pengaduan, tv. lahan parkir, mushola, ruang menyusui berfungsi dengan baik ?</label>
+                          <label for="p16_">8.2. Apakah unit layanan seperti ruang tunggu, bahan bacaan, kotak saran/pengaduan, tv. lahan parkir, mushola, ruang menyusui berfungsi dengan baik ?</label>
                           <div class="mt-2" id="p16_">
                             <div class="form-check form-check-inline">
                               <label class="form-check-label">Tidak Baik</label>
@@ -813,6 +903,12 @@
                             <div class="form-check form-check-inline">
                               <label class="form-check-label">Sangat Baik</label>
                             </div>
+                            @if ($p16_ == 1 || $p16_ == 2)
+                            <div class="mt-2">
+                              <label for="domisili">Rekomendasi Perbaikan</label>
+                              <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran16" wire:model="saran16" class="form-control {{$errors->first('saran16') ? "is-invalid" : "" }}" id="saran16" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                            </div>
+                            @endif
                           </div>
                           @error('p16_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                         </div>
@@ -840,7 +936,7 @@
                           <h3 class="mb-3" >Penanganan Pengaduan Pelayanan</h3>
                             {{-- Pertanyaan 1 --}}
                          <div class="row mt-5">
-                          <label for="p17_">Bagaimana pendapat saudara tentang penanganan pengaduan penggunaan pelayanan ?</label>
+                          <label for="p17_">9.1. Bagaimana pendapat saudara tentang penanganan pengaduan penggunaan pelayanan ?</label>
                           <div class="mt-2" id="p17_">
                             <div class="form-check form-check-inline">
                               <label class="form-check-label">Tidak Baik</label>
@@ -864,12 +960,18 @@
                             <div class="form-check form-check-inline">
                               <label class="form-check-label">Sangat Baik</label>
                             </div>
+                            @if ($p17_ == 1 || $p17_ == 2)
+                            <div class="mt-2">
+                              <label for="domisili">Rekomendasi Perbaikan</label>
+                              <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran17" wire:model="saran17" class="form-control {{$errors->first('saran17') ? "is-invalid" : "" }}" id="saran17" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                            </div>
+                            @endif
                             @error('p17_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                           </div>
 
                           {{-- Pertanyaan 1 --}}
                          <div class="row mt-5">
-                            <label for="p18_">Apakah fasilitas pengaduan, saran, dan masukan yang disediakan (konsultasi email, telpon, kotak saran dan tatap muka langsung) mudah diakses ?</label>
+                            <label for="p18_">9.2. Apakah fasilitas pengaduan, saran, dan masukan yang disediakan (konsultasi email, telpon, kotak saran dan tatap muka langsung) mudah diakses ?</label>
                             <div class="mt-2" id="p18_">
                               <div class="form-check form-check-inline">
                                 <label class="form-check-label">Tidak Mudah</label>
@@ -893,13 +995,19 @@
                               <div class="form-check form-check-inline">
                                 <label class="form-check-label">Sangat Mudah</label>
                               </div>
+                              @if ($p18_ == 1 || $p18_ == 2)
+                              <div class="mt-2">
+                                <label for="domisili">Rekomendasi Perbaikan</label>
+                                <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran18" wire:model="saran18" class="form-control {{$errors->first('saran18') ? "is-invalid" : "" }}" id="saran18" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                              </div>
+                              @endif
                             </div>
                             @error('p18_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                           </div>
 
                         {{-- Pertanyaan 1 --}}
                          <div class="row mt-5">
-                          <label for="p19_">Apakah petugas cepat merespon untuk setiap pengaduan dan saran/masukan ?</label>
+                          <label for="p19_">9.3. Apakah petugas cepat merespon untuk setiap pengaduan dan saran/masukan ?</label>
                           <div class="mt-2" id="p19_">
                             <div class="form-check form-check-inline">
                               <label class="form-check-label">Tidak Cepat</label>
@@ -923,13 +1031,19 @@
                             <div class="form-check form-check-inline">
                               <label class="form-check-label">Sangat Cepat</label>
                             </div>
+                            @if ($p19_ == 1 || $p19_ == 2)
+                            <div class="mt-2">
+                              <label for="domisili">Rekomendasi Perbaikan</label>
+                              <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran19" wire:model="saran19" class="form-control {{$errors->first('saran19') ? "is-invalid" : "" }}" id="saran19" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                            </div>
+                            @endif
                           </div>
                           @error('p19_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                         </div>
 
                           {{-- Pertanyaan 2 --}}
                           <div class="row mt-5">
-                            <label for="p20_">Apakah petugas dapat memberikan penyelesaian/solusi untuk setiap pengaduan yang telah dilaporkan ?</label>
+                            <label for="p20_">9.4. Apakah petugas dapat memberikan penyelesaian/solusi untuk setiap pengaduan yang telah dilaporkan ?</label>
                             <div class="mt-2" id="p20_">
                               <div class="form-check form-check-inline">
                                 <label class="form-check-label">Tidak Dapat Memberikan Solusi</label>
@@ -953,6 +1067,12 @@
                               <div class="form-check form-check-inline">
                                 <label class="form-check-label">Sangat Dapat Memberikan Solusi</label>
                               </div>
+                              @if ($p20_ == 1 || $p20_ == 2)
+                              <div class="mt-2">
+                                <label for="domisili">Rekomendasi Perbaikan</label>
+                                <input {{ $edit_toggle != true ? "disabled" : "" }} type="saran20" wire:model="saran20" class="form-control {{$errors->first('saran20') ? "is-invalid" : "" }}" id="saran20" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                              </div>
+                              @endif
                             </div>
                             @error('p20_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                           </div>
