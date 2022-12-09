@@ -594,7 +594,6 @@
                         </div>
                         @error('p12_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                       </div>
-
                       {{-- Pertanyaan 2 --}}
                       <div class="row mt-5">
                         <label for="p13_">Apakah petugas pelayanan memberikan penjelasan yang mudah dan tidak berbeli-belit ?</label>
