@@ -49,7 +49,7 @@
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(img/7.png)">
+        <div class="carousel-item active" style="background-image: url(img/foto_kintan.jpg)">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Selamat Datang di <span>LPSPL Sorong</span></h2>
