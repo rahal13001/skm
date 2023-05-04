@@ -53,7 +53,7 @@
     </div>
     <div class="u1">
         <p><b>Unsur 1 : Persyaratan Pelayanan</b><br>
-            <br> 1.1. Bagaimana pendapat saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanan ?
+            <br> 1.1. Bagaimana penilaian Bapak/Ibu tentang kesesuaian persyaratan pelayanan yang harus dipenuhi dengan persyaratan pelayanan yang diinformasikan ?
             <br> <b>
                 @if ($datasurvei->p1_ == 1)
                     Tidak Sesuai
@@ -66,16 +66,16 @@
                 @endif
             , Skor : {{ $datasurvei->p1_ }} </b><br>
             <br>
-            1.2. Apakah informasi mengenai persyaratan pelayanan cukup tersedia baik di papan pengumuman, brosur atau sistem pelayanan online ?
+            1.2. Bagaimana penilaian Bapak/Ibu mengenai kemudahan prosedur yang dijalani untuk mendapatkan layanan ?
             <br> <b>
                 @if ($datasurvei->p2_ == 1)
-                    Tidak Tersedia
+                    Tidak Mudah
                 @elseif ($datasurvei->p2_==2)
-                    Cukup Tersedia
+                    Cukup Mudah
                 @elseif($datasurvei->p2_==3)
-                    Tersedia
+                    Mudah
                 @else
-                    Sangat Tersedia
+                    Sangat Mudah
                 @endif
                 , Skor : {{ $datasurvei->p2_ }} </b> <br>
                 <br>
@@ -96,21 +96,34 @@
     
     <div class="u2">
         <p><br><br>
-            <b>Unsur 2 : Prosedur Pelayanan</b><br>
-            <br>Bagaimana pemahaman saudara tentang kemudahan prosedur pelayanan di unit ini ?<br>
+            <b>Unsur 2 : Kesesuaian Pelayanan</b><br>
+            2.1 Bagaimana penilaian Bapak/Ibu mengenai kesesuaian jangka waktu penyelesaian pelayanan dengan yang diinformasikan ?
+            <br> <b>
+            @if ($datasurvei->p3_ == 1)
+                Tidak Sesuai
+            @elseif ($datasurvei->p3_==2)
+                Cukup Sesuai
+            @elseif($datasurvei->p3_==3)
+                Sesuai
+            @else
+                Sangat Sesuai
+            @endif
+            , Skor : {{ $datasurvei->p3_ }} </b> <br>
+
+            <br>2.2. Bagaimana penilaian Bapak/Ibu mengenai kesesuaian biaya pelayanan yang dibayarkan dengan yang diinformasikan ?<br>
             <b> 
                 @if ($datasurvei->p4_ == 1)
-                    Tidak Puas
+                    Tidak Sesuai
                 @elseif ($datasurvei->p4_==2)
-                    Cukup Puas
+                    Cukup Sesuai
                 @elseif($datasurvei->p4_==3)
-                    Puas
+                    Sesuai
                 @else
-                    Sangat Puas
+                    Sangat Sesuai
                 @endif
                 , Skor : {{ $datasurvei->p4_ }}
                 </b><br><br>
-            Apakah prosedur pengajuan permohonan sudah dijalankan sesuai SOP (Standar Operasional Prosedur) ?
+            2.3. Bagaimana pendapat Saudara tentang kesesuaian produk pelayanan antara yang ada pada publikasi dengan pelayanan yang diberikan ?
             <br><b>
                 @if ($datasurvei->p5_ == 1)
                 Tidak Sesuai
@@ -128,242 +141,64 @@
     <div class="page-break"></div>
     <div class="u3dan8">
         <p>
-            <b>Unsur 3 : Kemampuan Petugas</b><br>
-            <br>Bagaimana pendapat saudara tentang kompetensi atau kemampuan petugas dalam memberikan pelayanan ?
+            <b>Unsur 3 : Aplikasi Sistem Pelayanan</b><br>
+            <br>3.1. Bagaimana kecepatan respon (membuka halaman, konten, pencarian informasi, unduh/unggah) dari aplikasi sistem pelayanan yang diberikan ?
             <br>
             <b> 
                 @if ($datasurvei->p6_ == 1)
-                    Tidak Mampu
+                    Tidak Cepat
                 @elseif ($datasurvei->p6_==2)
-                    Cukup Mampu
+                    Cukup Cepat
                 @elseif($datasurvei->p6_==3)
-                    Mampu
+                    Cepat
                 @else
-                    Sangat Mampu
+                    Sangat Cepat
                 @endif
                 , Skor : {{ $datasurvei->p6_ }}
             </b><br><br>
-            Apakah petugas memiliki kemampuan menjalankan prosedur kepada pelanggan ?
+            3.2. Bagaimana kemudahan dalam penggunaan fitur pada aplikasi sistem layanan ?
             <br><b>
                 @if ($datasurvei->p7_ == 1)
-                    Tidak Mampu
+                    Tidak Mudah
                 @elseif ($datasurvei->p7_==2)
-                    Cukup Mampu
+                    Cukup Mudah
                 @elseif($datasurvei->p7_==3)
-                    Mampu
+                    Mudah
                 @else
-                    Sangat Mampu
+                    Sangat Mudah
                 @endif
                 , Skor : {{ $datasurvei->p7_ }}
-            </b>
+            </b><br><br>
+            3.3. Bagaimana penilaian Bapak/Ibu tentang kualitas isi/konten dari aplikasi sistem layanan ?
+            <br><b>
+                @if ($datasurvei->p7_ == 1)
+                    Tidak Baik
+                @elseif ($datasurvei->p7_==2)
+                    Cukup Baik
+                @elseif($datasurvei->p7_==3)
+                    Baik
+                @else
+                    Sangat Baik
+                @endif
+                , Skor : {{ $datasurvei->p7_ }}
         </p>
     </div>
     <div class="u4">
         <p>
-            <b>Unsur 4 : Kecepatan Waktu Pelayanan</b><br>
-            <br> Bagaimana pendapat saudara tetang kecepatan waktu pelayanan di unit ini ?
+            <b>Unsur 4 : Layanan Konsultasi dan Pengaduan</b><br>
+            <br> 4.1. Bagaimana penilaian Bapak/Ibu mengenai layanan konsultasi dan pengaduan yang tersedia (sarana pengaduan/kemudahan mengadu/tindak lanjut) ?
             <br>
             <b>
                 @if ($datasurvei->p8_ == 1)
-                    Tidak Mampu
+                    Tidak Baik
                 @elseif ($datasurvei->p8_==2)
-                    Cukup Mampu
+                    Cukup Baik
                 @elseif($datasurvei->p8_==3)
-                    Mampu
+                    Baik
                 @else
-                    Sangat Mampu
+                    Sangat Baik
                 @endif
                 , Skor : {{ $datasurvei->p8_ }}
-            </b><br><br>
-            Apakah informasi waktu operasional pelayanan dan penyeesaian pelayanan sudah sesuai dengan waktu yang sudah ditetapkan ?
-            <br><b>
-            @if ($datasurvei->p9_ == 1)
-                Tidak Sesuai
-            @elseif ($datasurvei->p9_==2)
-                Cukup Sesuai
-            @elseif($datasurvei->p9_==3)
-                Sesuai
-            @else
-                Sangat Sesuai
-            @endif
-            , Skor : {{ $datasurvei->p9_ }}
-            </b>
-        </p>
-    </div>
-    <div class="u5">
-        <p>
-            <b>Unsur 5 : Produk Layanan</b><br>
-            <br> Bagaimana pendapat saudara tentang kesesuaian produk pelayanan atara yang tercantum dalam standar pelayanan dengan hasil yang diberikan ?
-            <br>
-            <b>
-            @if ($datasurvei->p10_ == 1)
-                Tidak Sesuai
-            @elseif ($datasurvei->p10_==2)
-                Cukup Sesuai
-            @elseif($datasurvei->p10_==3)
-                Sesuai
-            @else
-                Sangat Sesuai
-            @endif
-            , Skor : {{ $datasurvei->p10_ }}
-            </b><br><br>
-            Apakah informasi tentang daftar produk layanan dapat diketahui dan diakses dengan baik ?
-            <br><b>
-                @if ($datasurvei->p11_ == 1)
-                Tidak Baik
-            @elseif ($datasurvei->p11_==2)
-                Cukup Baik
-            @elseif($datasurvei->p11_==3)
-                Baik
-            @else
-                Sangat Baik
-            @endif
-            , Skor : {{ $datasurvei->p11_ }}
-            </b>
-        </p>
-    </div>
-    <div class="u6">
-        <p>
-            <b>Unsur 6 : Kesopanan dan Keramahan Petugas</b><br>
-            <br> Bagaimana pendapat saudara tentang kesopanan dan keramahan petugas dalam memberikan pelayanan ?
-            <br>
-            <b>
-            @if ($datasurvei->p12_ == 1)
-                Tidak Ramah dan Sopan
-            @elseif ($datasurvei->p12_==2)
-                Cukup Ramah dan Sopan
-            @elseif($datasurvei->p12_==3)
-                Ramah dan Sopan
-            @else
-                Sangat Ramah dan Sopan
-            @endif
-            , Skor : {{ $datasurvei->p12_ }}
-            </b><br><br>
-            Apakah petugas pelayanan memberikan penjelasan yang mudah dan tidak berbeli-belit ?
-            <br><b>
-            @if ($datasurvei->p13_ == 1)
-                Tidak Mudah
-            @elseif ($datasurvei->p13_==2)
-                Cukup Mudah
-            @elseif($datasurvei->p13_==3)
-                Mudah
-            @else
-                Sangat Mudah
-            @endif
-            , Skor : {{ $datasurvei->p13_ }}
-            </b>
-        </p>
-    </div>
-
-    <div class="u7">
-        <p>
-            <b>Unsur 7 : Kewajaran Biaya</b><br>
-            <br> Bagaimana pendapat saudara tentang biaya/tarif dalam pelayanan
-            (Diluar PNBP) ?
-            <br>
-            <b>
-            @if ($datasurvei->p14_ == 1)
-                Tidak Murah
-            @elseif ($datasurvei->p14_==2)
-                Cukup Murah
-            @elseif($datasurvei->p14_==3)
-                Murah
-            @else
-                Sangat Murah
-            @endif
-            , Skor : {{ $datasurvei->p14_ }}
-            </b>
-        </p>
-    </div>
-
-    <div class="page-break"></div>
-    <div class="u3dan8">
-        <p>
-            <b>Unsur 8 : Kualitas Sarana Dan Prasarana</b><br>
-            <br> Bagaimana pendapat saudara tentang sarana dan prasarana pelayanan ?
-            <br>
-            <b>
-            @if ($datasurvei->p15_ == 1)
-                Tidak Baik
-            @elseif ($datasurvei->p15_==2)
-                Cukup Baik
-            @elseif($datasurvei->p15_==3)
-                Baik
-            @else
-                Sangat Baik
-            @endif
-            , Skor : {{ $datasurvei->p15_ }}
-            </b><br><br>
-            Apakah unit layanan seperti ruang tunggu, bahan bacaan, kotak saran/pengaduan, tv. lahan parkir, mushola, ruang menyusui berfungsi dengan baik ?
-            <br><b>
-            @if ($datasurvei->p16_ == 1)
-                Tidak Baik
-            @elseif ($datasurvei->p16_==2)
-                Cukup Baik
-            @elseif($datasurvei->p16_==3)
-                Baik
-            @else
-                Sangat Baik
-            @endif
-            , Skor : {{ $datasurvei->p16_ }}
-            </b>
-        </p>
-    </div>
-
-    <div class="u9">
-        <p>
-            <b>Unsur 9 : Penanganan Pengaduan Pelayanan</b><br><br>
-            Bagaimana pendapat saudara tentang penanganan pengaduan penggunaan pelayanan ?
-            <br><b>
-            @if ($datasurvei->p17_ == 1)
-                Tidak Baik
-            @elseif ($datasurvei->p17_==2)
-                Cukup Baik
-            @elseif($datasurvei->p17_==3)
-                Baik
-            @else
-                Sangat Baik
-            @endif
-            , Skor : {{ $datasurvei->p17_ }}
-            </b><br><br>
-           Apakah fasilitas pengaduan, saran, dan masukan yang disediakan (konsultasi email, telpon, kotak saran dan tatap muka langsung) mudah diakses ?
-            <br><b>
-                @if ($datasurvei->p18_ == 1)
-                Tidak Mudah
-            @elseif ($datasurvei->p18_==2)
-                Cukup Mudah
-            @elseif($datasurvei->p18_==3)
-                Mudah
-            @else
-                Sangat Mudah
-            @endif
-            , Skor : {{ $datasurvei->p18_ }}
-            </b><br><br>
-            Apakah petugas cepat merespon untuk setiap pengaduan dan saran/masukan ?
-            <br><b>
-                @if ($datasurvei->p19_ == 1)
-                Tidak Cepat
-            @elseif ($datasurvei->p19_==2)
-                Cukup Cepat
-            @elseif($datasurvei->p19_==3)
-                Cepat
-            @else
-                Sangat Cepat
-            @endif
-            , Skor : {{ $datasurvei->p19_ }}
-            </b><br><br>
-            Apakah petugas dapat memberikan penyelesaian/solusi untuk setiap pengaduan yang telah dilaporkan ?
-            <br><b>
-                @if ($datasurvei->p20_ == 1)
-                Tidak Dapat Memberi Solusi
-            @elseif ($datasurvei->p20_==2)
-                Cukup Dapat Memberi Solusi
-            @elseif($datasurvei->p20_==3)
-                Dapat Memberi Solusi
-            @else
-                Sangat Dapat Memberi Solusi
-            @endif
-            , Skor : {{ $datasurvei->p20_ }}
             </b><br><br>
         </p>
     </div>
@@ -431,61 +266,7 @@
                         {{ $datasurvei->sugestion->saran_9 }}
                     </li>
                     @endif
-                    @if (!empty($datasurvei->sugestion->saran_10))
-                    <li>
-                        {{ $datasurvei->sugestion->saran_10 }}
-                    </li>
-                    @endif
-                    @if (!empty($datasurvei->sugestion->saran_11))
-                    <li>
-                        {{ $datasurvei->sugestion->saran_11 }}
-                    </li>
-                    @endif
-                    @if (!empty($datasurvei->sugestion->saran_12))
-                    <li>
-                        {{ $datasurvei->sugestion->saran_12 }}
-                    </li>
-                    @endif
-                    @if (!empty($datasurvei->sugestion->saran_13))
-                    <li>
-                        {{ $datasurvei->sugestion->saran_13 }}
-                    </li>
-                    @endif
-                    @if (!empty($datasurvei->sugestion->saran_14))
-                    <li>
-                        {{ $datasurvei->sugestion->saran_14 }}
-                    </li>
-                    @endif
-                    @if (!empty($datasurvei->sugestion->saran_15))
-                    <li>
-                        {{ $datasurvei->sugestion->saran_15 }}
-                    </li>
-                    @endif
-                    @if (!empty($datasurvei->sugestion->saran_16))
-                    <li>
-                        {{ $datasurvei->sugestion->saran_16 }}
-                    </li>
-                    @endif
-                    @if (!empty($datasurvei->sugestion->saran_17))
-                    <li>
-                        {{ $datasurvei->sugestion->saran_17 }}
-                    </li>
-                    @endif
-                    @if (!empty($datasurvei->sugestion->saran_18))
-                    <li>
-                        {{ $datasurvei->sugestion->saran_18 }}
-                    </li>
-                    @endif
-                    @if (!empty($datasurvei->sugestion->saran_19))
-                    <li>
-                        {{ $datasurvei->sugestion->saran_19 }}
-                    </li>
-                    @endif
-                    @if (!empty($datasurvei->sugestion->saran_20))
-                    <li>
-                        {{ $datasurvei->sugestion->saran_20 }}
-                    </li>
-                    @endif
+                  
     
                 </ol>
             

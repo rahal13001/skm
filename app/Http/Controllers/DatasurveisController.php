@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Livewire\Detailsurvei;
 use App\Models\Datasurvei;
 use App\Models\Twandyear;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 // use Barryvdh\DomPDF\Facade as PDF;
 use \PDF;
 use Illuminate\Http\Request;
@@ -21,15 +23,19 @@ class DatasurveisController extends Controller
         $datasurvei = Datasurvei::with('respondence')->whereKey($id)->first();
         $q_report = base64_encode(QrCode::size(100)->generate('http://skm.timurbersinar.com/pdf/'.$datasurvei->id.'/'.$datasurvei->respondence->nama));
 
-        $pdf = PDF::loadView('pdf.pdf', compact('datasurvei', 'q_report'))->setPaper('a4');
+        // $pdf = PDF::loadView('pdf.pdf3', ['datasurvei' => $datasurvei, 'q_report' => $q_report])->setPaper('a4');
+
+        $pdf = PDF::loadView('pdf.pdf3', compact('datasurvei', 'q_report'))->setPaper('a4');
+               
         return $pdf->stream($datasurvei->nama.'_'.$datasurvei->badan_usaha.'.pdf');
+
     }
 
     public function pdfuser($dataid){
         $datasurvei = Datasurvei::with('respondence')->whereKey($dataid)->first();
         $q_report = base64_encode(QrCode::size(100)->generate('http://skm.timurbersinar.com/pdf/'.$datasurvei->id.'/'.$datasurvei->respondence->nama));
 
-        $pdf = PDF::loadView('pdf.pdf', compact('datasurvei', 'q_report'))->setPaper('a4');
+        $pdf = PDF::loadView('pdf.pdf3', compact('datasurvei', 'q_report'))->setPaper('a4');
         return $pdf->stream($datasurvei->nama.'_'.$datasurvei->badan_usaha.'.pdf');
     }
 

@@ -9,12 +9,8 @@
           <li class="{{ $currentStep != 3 ? '' : 'filter-active' }}" wire:click="u1">Unsur 2</li>
           <li class="{{ $currentStep != 4 ? '' : 'filter-active' }}" wire:click="u2">Unsur 3</li>
           <li class="{{ $currentStep != 5 ? '' : 'filter-active' }}" wire:click="u3">Unsur 4</li>
-          <li class="{{ $currentStep != 6 ? '' : 'filter-active' }}" wire:click="u4">Unsur 5</li>
-          <li class="{{ $currentStep != 7 ? '' : 'filter-active' }}" wire:click="u5">Unsur 6</li>
-          <li class="{{ $currentStep != 8 ? '' : 'filter-active' }}" wire:click="u6">Unsur 7</li>
-          <li class="{{ $currentStep != 9 ? '' : 'filter-active' }}" wire:click="u7">Unsur 8</li>
-          <li class="{{ $currentStep != 10 ? '' : 'filter-active' }}" wire:click="u8">Unsur 9</li>
-          <li class="{{ $currentStep != 11 ? '' : 'filter-active' }}" wire:click="u9">Saran</li>
+          <li class="{{ $currentStep != 6 ? '' : 'filter-active' }}" wire:click="u4">Saran</li>
+          
         </ul>
       </div>
     </div>
@@ -154,7 +150,7 @@
                 <h3 class="mb-3" >Persyaratan Pelayanan</h3>
                 {{-- Pertanyaan 1 --}}
                   <div class="row mt-3">
-                    <label for="p1_">1.1. Bagaimana pendapat saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanan ?</label>
+                    <label for="p1_">1.1. Bagaimana penilaian Bapak/Ibu tentang kesesuaian persyaratan pelayanan yang harus dipenuhi dengan persyaratan pelayanan yang diinformasikan ?</label>
                     <div class="mt-2" id="p1_">
                       <div class="form-check form-check-inline">
                         <label class="form-check-label">Tidak Sesuai</label>
@@ -190,10 +186,10 @@
                   {{-- <input disabled value="{{ $respondence->id }}" wire:model="respondence" hidden> --}}
                     {{-- Pertanyaan 2 --}}
                     <div class="row mt-5">
-                      <label for="p2_">1.2. Apakah informasi mengenai persyaratan pelayanan cukup tersedia baik di apan pengumuman, brosur atau sistem pelayanan online ?</label>
+                      <label for="p2_">1.2. Bagaimana penilaian Bapak/Ibu mengenai kemudahan prosedur yang dijalani untuk mendapatkan layanan ?</label>
                       <div class="mt-2" id="p2_">
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Tidak Tersedia</label>
+                          <label class="form-check-label">Tidak Mudah</label>
                         </div>
                           <div class="form-check form-check-inline text-center">
                             <label class="form-check-label labelradio  " for="p2_1">1<br>
@@ -212,7 +208,7 @@
                             <input class="form-check-input mx-auto" type="radio" wire:model="p2_" id="p2_4" value="4" {{{ $p2_ == '4' ? "checked" : "" }}}></label>
                           </div>
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Sangat Tersedia</label>
+                          <label class="form-check-label">Sangat Mudah</label>
                         </div>
                         @if ($p2_ == 1 || $p2_ == 2)
                         <div class="mt-2">
@@ -224,41 +220,7 @@
                       @error('p2_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                     </div>
 
-                    {{-- Pertanyaan 3 --}}
-                      <div class="row mt-5">
-                        <label for="p3_">1.3 Apakah informasi tentang persyaratan pelayanan mudah dipahami ?</label>
-                        <div class="mt-2" id="p3_">
-                          <div class="form-check form-check-inline">
-                            <label class="form-check-label">Tidak Mudah</label>
-                          </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio  " for="p3_1">1<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_1" value="1" {{{ $p3_ == '1' ? "checked" : "" }}}></label>
-                            </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p3_2">2<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_2" value="2" {{{ $p3_ == '2' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p3_3">3<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_3" value="3" {{{ $p3_ == '3' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p3_4">4<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_4" value="4" {{{ $p3_ == '4' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <label class="form-check-label">Sangat Mudah</label>
-                              </div>
-                              @if ($p3_ == 1 || $p3_ == 2)
-                              <div class="mt-2">
-                                <label for="domisili">Rekomendasi Perbaikan</label>
-                                <input type="saran3" wire:model="saran3" class="form-control {{$errors->first('saran3') ? "is-invalid" : "" }}" id="saran3" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
-                              </div>
-                              @endif
-                            </div>
-                            @error('p3_') <span class="error" style="color: red">{{ $message }}</span> @enderror
-                          </div>
+                   
 
                           <div class="mt-5 row">
                             <div class="col-md-4">
@@ -276,13 +238,49 @@
                 
                 {{-- U2 --}}
                 <div class="needs-validation" id="step3" style="display: {{ $currentStep != 3 ? 'none' : '' }}">
-                  <h3 class="mb-3" >Prosedur Pelayanan</h3>
-                    {{-- Pertanyaan 1 --}}
+                  <h3 class="mb-3" >Kesesuaian Pelayanan</h3>
+                     {{-- Pertanyaan 1 --}}
+                     <div class="row mt-5">
+                      <label for="p3_">2.1 Bagaimana penilaian Bapak/Ibu mengenai kesesuaian jangka waktu penyelesaian pelayanan dengan yang diinformasikan ?</label>
+                      <div class="mt-2" id="p3_">
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">Tidak Sesuai </label>
+                        </div>
+                          <div class="form-check form-check-inline text-center">
+                            <label class="form-check-label labelradio  " for="p3_1">1<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_1" value="1" {{{ $p3_ == '1' ? "checked" : "" }}}></label>
+                          </div>
+                          <div class="form-check form-check-inline text-center">
+                            <label class="form-check-label labelradio " for="p3_2">2<br>
+                              <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_2" value="2" {{{ $p3_ == '2' ? "checked" : "" }}}></label>
+                            </div>
+                            <div class="form-check form-check-inline text-center">
+                              <label class="form-check-label labelradio " for="p3_3">3<br>
+                              <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_3" value="3" {{{ $p3_ == '3' ? "checked" : "" }}}></label>
+                            </div>
+                            <div class="form-check form-check-inline text-center">
+                              <label class="form-check-label labelradio " for="p3_4">4<br>
+                              <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_4" value="4" {{{ $p3_ == '4' ? "checked" : "" }}}></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <label class="form-check-label">Sangat Sesuai </label>
+                            </div>
+                            @if ($p3_ == 1 || $p3_ == 2)
+                            <div class="mt-2">
+                              <label for="domisili">Rekomendasi Perbaikan</label>
+                              <input type="saran3" wire:model="saran3" class="form-control {{$errors->first('saran3') ? "is-invalid" : "" }}" id="saran3" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                            </div>
+                            @endif
+                          </div>
+                          @error('p3_') <span class="error" style="color: red">{{ $message }}</span> @enderror
+                        </div>
+
+                    {{-- Pertanyaan 2 --}}
                     <div class="row mt-5">
-                      <label for="p4_">2.1. Bagaimana pemahaman saudara tentang kemudahan prosedur pelayanan di unit ini ?</label>
+                      <label for="p4_">2.2. Bagaimana penilaian Bapak/Ibu mengenai kesesuaian biaya pelayanan yang dibayarkan dengan yang diinformasikan ?</label>
                       <div class="mt-2" id="p4_">
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Tidak Mudah</label>
+                          <label class="form-check-label">Tidak Sesuai</label>
                         </div>
                           <div class="form-check form-check-inline text-center">
                             <label class="form-check-label labelradio  " for="p4_1">1<br>
@@ -301,7 +299,7 @@
                             <input class="form-check-input mx-auto" type="radio" wire:model="p4_" id="p4_4" value="4" {{{ $p4_ == '4' ? "checked" : "" }}}></label>
                           </div>
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Sangat Mudah</label>
+                          <label class="form-check-label">Sangat Sesuai</label>
                         </div>
                         @if ($p4_ == 1 || $p4_ == 2)
                         <div class="mt-2">
@@ -313,9 +311,9 @@
                       @error('p4_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                     </div>
 
-                      {{-- Pertanyaan 2 --}}
+                      {{-- Pertanyaan 3 --}}
                     <div class="row mt-5">
-                      <label for="p5_">2.2. Apakah prosedur pengajuan permohonan sudah dijalankan sesuai SOP (Standar Operasional Prosedur) ?</label>
+                      <label for="p5_">2.3. Bagaimana pendapat Saudara tentang kesesuaian produk pelayanan antara yang ada pada publikasi dengan pelayanan yang diberikan ?</label>
                       <div class="mt-2" id="p5_">
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Tidak Sesuai</label>
@@ -363,13 +361,13 @@
 
                   {{-- U3 --}}
                   <div class="needs-validation" id="step4" style="display: {{ $currentStep != 4 ? 'none' : '' }}">
-                    <h3 class="mb-3" >Kemampuan Petugas</h3>
+                    <h3 class="mb-3" >Aplikasi Sistem Pelayanan</h3>
                      {{-- Pertanyaan 3 --}}
                      <div class="row mt-5">
-                      <label for="p6_">3.1. Bagaimana pendapat saudara tentang kompetensi atau kemampuan petugas dalam memberikan pelayanan ?</label>
+                      <label for="p6_">3.1. Bagaimana kecepatan respon (membuka halaman, konten, pencarian informasi, unduh/unggah) dari aplikasi sistem pelayanan yang diberikan ?</label>
                       <div class="mt-2" id="p6_">
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Tidak Mampu</label>
+                          <label class="form-check-label">Tidak Cepat</label>
                         </div>
                           <div class="form-check form-check-inline text-center">
                             <label class="form-check-label labelradio  " for="p6_1">1<br>
@@ -388,7 +386,7 @@
                             <input class="form-check-input mx-auto" type="radio" wire:model="p6_" id="p6_4" value="4" {{{ $p6_ == '4' ? "checked" : "" }}}></label>
                           </div>
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Sangat Mampu</label>
+                          <label class="form-check-label">Sangat Cepat</label>
                         </div>
                         @if ($p6_ == 1 || $p6_ == 2)
                         <div class="mt-2">
@@ -402,10 +400,10 @@
 
                     {{-- Pertanyaan 4 --}}
                     <div class="row mt-5">
-                      <label for="p7_">3.2. Apakah petugas memiliki kemampuan menjalankan prosedur kepada pelanggan ?</label>
+                      <label for="p7_">3.2. Bagaimana kemudahan dalam penggunaan fitur pada aplikasi sistem layanan ?</label>
                       <div class="mt-2" id="p7_">
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Tidak Mampu</label>
+                          <label class="form-check-label">Tidak Mudah</label>
                         </div>
                           <div class="form-check form-check-inline text-center">
                             <label class="form-check-label labelradio  " for="p7_1">1<br>
@@ -424,7 +422,7 @@
                             <input class="form-check-input mx-auto" type="radio" wire:model="p7_" id="p7_4" value="4" {{{ $p7_ == '4' ? "checked" : "" }}}></label>
                           </div>
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Sangat Mampu</label>
+                          <label class="form-check-label">Sangat Mudah</label>
                         </div>
                         @if ($p7_ == 1 || $p7_ == 2)
                         <div class="mt-2">
@@ -436,6 +434,43 @@
                       @error('p7_') <span class="error" style="color: red">{{ $message }}</span> @enderror
                     </div>
 
+                    <div class="row mt-5">
+                      <label for="p8_">3.3. Bagaimana penilaian Bapak/Ibu tentang kualitas isi/konten dari aplikasi sistem layanan ?</label>
+                      <div class="mt-2" id="p8_">
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">Tidak Baik</label>
+                        </div>
+                          <div class="form-check form-check-inline text-center">
+                            <label class="form-check-label labelradio  " for="p8_1">1<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_1" value="1" {{{ $p8_ == '1' ? "checked" : "" }}}></label>
+                          </div>
+                          <div class="form-check form-check-inline text-center">
+                            <label class="form-check-label labelradio " for="p8_2">2<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_2" value="2" {{{ $p8_ == '2' ? "checked" : "" }}}></label>
+                          </div>
+                          <div class="form-check form-check-inline text-center">
+                            <label class="form-check-label labelradio " for="p8_3">3<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_3" value="3" {{{ $p8_ == '3' ? "checked" : "" }}}></label>
+                          </div>
+                          <div class="form-check form-check-inline text-center">
+                            <label class="form-check-label labelradio " for="p8_4">4<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_4" value="4" {{{ $p8_ == '4' ? "checked" : "" }}}></label>
+                          </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">Sangat Baik</label>
+                        </div>
+                        @if ($p8_ == 1 || $p8_ == 2)
+                        <div class="mt-2">
+                          <label for="domisili">Rekomendasi Perbaikan</label>
+                          <input type="saran8" wire:model="saran8" class="form-control {{$errors->first('saran8') ? "is-invalid" : "" }}" id="saran8" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
+                        </div>
+                        @endif
+                      </div>
+                      @error('p8_') <span class="error" style="color: red">{{ $message }}</span> @enderror
+                    </div>
+                   
+                   
+                   
                     <div class="mt-5 row">
                       <div class="col-md-4">
                         <button class="btn btn-danger" type="button" wire:click="back(3)">Kembali</button>
@@ -451,50 +486,17 @@
  
                   {{-- U4 --}}
                   <div class="needs-validation" id="step4" style="display: {{ $currentStep != 5 ? 'none' : '' }}">
-                    <h3 class="mb-3" >Kecepatan Waktu Pelayanan</h3>                  
+                    <h3 class="mb-3" >Layanan Konsultasi dan Pengaduan</h3>                  
 
                      {{-- Mulai U4 --}}
-                      <div class="row mt-5">
-                        <label for="p8_">4.1. Bagaimana pendapat saudara tetang kecepatan waktu pelayanan di unit ini ?</label>
-                        <div class="mt-2" id="p8_">
-                          <div class="form-check form-check-inline">
-                            <label class="form-check-label">Tidak Cepat</label>
-                          </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio  " for="p8_1">1<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_1" value="1" {{{ $p8_ == '1' ? "checked" : "" }}}></label>
-                            </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p8_2">2<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_2" value="2" {{{ $p8_ == '2' ? "checked" : "" }}}></label>
-                            </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p8_3">3<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_3" value="3" {{{ $p8_ == '3' ? "checked" : "" }}}></label>
-                            </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p8_4">4<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_4" value="4" {{{ $p8_ == '4' ? "checked" : "" }}}></label>
-                            </div>
-                          <div class="form-check form-check-inline">
-                            <label class="form-check-label">Sangat Cepat</label>
-                          </div>
-                          @if ($p8_ == 1 || $p8_ == 2)
-                          <div class="mt-2">
-                            <label for="domisili">Rekomendasi Perbaikan</label>
-                            <input type="saran8" wire:model="saran8" class="form-control {{$errors->first('saran8') ? "is-invalid" : "" }}" id="saran8" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
-                          </div>
-                          @endif
-                        </div>
-                        @error('p8_') <span class="error" style="color: red">{{ $message }}</span> @enderror
-                      </div>
+                    
 
                       {{-- Pertanyaan 2 --}}
                       <div class="row mt-5">
-                        <label for="p9_">4.2. Apakah informasi waktu operasional pelayanan dan penyeesaian pelayanan sudah sesuai dengan waktu yang sudah ditetapkan ?</label>
+                        <label for="p9_">4.1. Bagaimana penilaian Bapak/Ibu mengenai layanan konsultasi dan pengaduan yang tersedia (sarana pengaduan/kemudahan mengadu/tindak lanjut) ?</label>
                         <div class="mt-2" id="p9_">
                           <div class="form-check form-check-inline">
-                            <label class="form-check-label">Tidak Sesuai</label>
+                            <label class="form-check-label">Tidak Baik</label>
                           </div>
                             <div class="form-check form-check-inline text-center">
                               <label class="form-check-label labelradio  " for="p9_1">1<br>
@@ -513,7 +515,7 @@
                               <input class="form-check-input mx-auto" type="radio" wire:model="p9_" id="p9_4" value="4" {{{ $p9_ == '4' ? "checked" : "" }}}></label>
                             </div>
                           <div class="form-check form-check-inline">
-                            <label class="form-check-label">Sangat Sesuai</label>
+                            <label class="form-check-label">Sangat Baik</label>
                           </div>
                           @if ($p9_ == 1 || $p9_ == 2)
                           <div class="mt-2">
@@ -527,7 +529,7 @@
                       
                       <div class="mt-5 row">
                         <div class="col-md-4">
-                          <button class="btn btn-danger" type="button" wire:click="back(3)">Kembali</button>
+                          <button class="btn btn-danger" type="button" wire:click="back(4)">Kembali</button>
 
                         </div>
                         <div class="text-center col-md-4">
@@ -538,479 +540,9 @@
                   </div>
 
 
-                  {{-- U5 --}}
-                  <div class="needs-validation" id="step4" style="display: {{ $currentStep != 6 ? 'none' : '' }}">
-                    <h3 class="mb-3" >Produk Layanan</h3>
-                    {{-- Pertanyaan 3 --}}
-                    <div class="row mt-5">
-                      <label for="p10_">5.1. Bagaimana pendapat saudara tentang kesesuaian produk pelayanan atara yang tercantum dalam standar pelayanan dengan hasil yang diberikan ?</label>
-                      <div class="mt-2" id="p10_">
-                        <div class="form-check form-check-inline">
-                          <label class="form-check-label">Tidak Sesuai</label>
-                        </div>
-                          <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio  " for="p10_1">1<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p10_" id="p10_1" value="1" {{{ $p10_ == '1' ? "checked" : "" }}}></label>
-                          </div>
-                          <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p10_2">2<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p10_" id="p10_2" value="2" {{{ $p10_ == '2' ? "checked" : "" }}}></label>
-                          </div>
-                          <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p10_3">3<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p10_" id="p10_3" value="3" {{{ $p10_ == '3' ? "checked" : "" }}}></label>
-                          </div>
-                          <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p10_4">4<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p10_" id="p10_4" value="4" {{{ $p10_ == '4' ? "checked" : "" }}}></label>
-                          </div>
-                        <div class="form-check form-check-inline">
-                          <label class="form-check-label">Sangat Sesuai</label>
-                        </div>
-                        @if ($p10_ == 1 || $p10_ == 2)
-                        <div class="mt-2">
-                          <label for="domisili">Rekomendasi Perbaikan</label>
-                          <input type="saran10" wire:model="saran10" class="form-control {{$errors->first('saran10') ? "is-invalid" : "" }}" id="saran10" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
-                        </div>
-                        @endif
-                      </div>
-                      @error('p10_') <span class="error" style="color: red">{{ $message }}</span> @enderror
-                    </div>
-
-                    {{-- Pertanyaan 4 --}}
-                    <div class="row mt-5">
-                      <label for="p11_">5.2. Apakah informasi tentang daftar produk layanan dapat diketahui dan diakses dengan baik ?</label>
-                      <div class="mt-2" id="p11_">
-                        <div class="form-check form-check-inline">
-                          <label class="form-check-label">Tidak Baik</label>
-                        </div>
-                          <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio  " for="p11_1">1<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p11_" id="p11_1" value="1" {{{ $p11_ == '1' ? "checked" : "" }}}></label>
-                          </div>
-                          <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p11_2">2<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p11_" id="p11_2" value="2" {{{ $p11_ == '2' ? "checked" : "" }}}></label>
-                          </div>
-                          <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p11_3">3<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p11_" id="p11_3" value="3" {{{ $p11_ == '3' ? "checked" : "" }}}></label>
-                          </div>
-                          <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p11_4">4<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p11_" id="p11_4" value="4" {{{ $p11_ == '4' ? "checked" : "" }}}></label>
-                          </div>
-                        <div class="form-check form-check-inline">
-                          <label class="form-check-label">Sangat Baik</label>
-                        </div>
-                        @if ($p11_ == 1 || $p11_ == 2)
-                        <div class="mt-2">
-                          <label for="domisili">Rekomendasi Perbaikan</label>
-                          <input type="saran11" wire:model="saran11" class="form-control {{$errors->first('saran11') ? "is-invalid" : "" }}" id="saran11" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
-                        </div>
-                        @endif
-                      </div>
-                      @error('p11_') <span class="error" style="color: red">{{ $message }}</span> @enderror
-                    </div>
-
-                    <div class="mt-5 row">
-                      <div class="col-md-4">
-                        <button class="btn btn-danger" type="button" wire:click="back(5)">Kembali</button>
-
-                      </div>
-                      <div class="text-center col-md-4">
-                        <button class="btn btn-primary" wire:click="u5" type="button">Selanjutnya</button>
-                      </div>
-                    </div>
-                  </div>
-                  {{-- U5 --}}
-
-
-
-
-                      {{--U6--}}
-                      <div class="needs-validation" id="step5" style="display: {{ $currentStep != 7 ? 'none' : '' }}">
-                        <h3 class="mb-3" >Kesopanan dan Keramahan Petugas</h3>
-                      {{-- Pertanyaan 1 --}}
-                      <div class="row mt-5">
-                        <label for="p12_">6.1. Bagaimana pendapat saudara tentang kesopanan dan keramahan petugas dalam memberikan pelayanan ?</label>
-                        <div class="mt-2" id="p12_">
-                          <div class="form-check form-check-inline">
-                            <label class="form-check-label">Tidak Sopan dan Ramah</label>
-                          </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio  " for="p12_1">1<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p12_" id="p12_1" value="1" {{{ $p12_ == '1' ? "checked" : "" }}}></label>
-                            </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p12_2">2<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p12_" id="p12_2" value="2" {{{ $p12_ == '2' ? "checked" : "" }}}></label>
-                            </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p12_3">3<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p12_" id="p12_3" value="3" {{{ $p12_ == '3' ? "checked" : "" }}}></label>
-                            </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p12_4">4<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p12_" id="p12_4" value="4" {{{ $p12_ == '4' ? "checked" : "" }}}></label>
-                            </div>
-                          <div class="form-check form-check-inline">
-                            <label class="form-check-label">Sangat Sopan dan Ramah</label>
-                          </div>
-                          @if ($p12_ == 1 || $p12_ == 2)
-                          <div class="mt-2">
-                            <label for="domisili">Rekomendasi Perbaikan</label>
-                            <input type="saran12" wire:model="saran12" class="form-control {{$errors->first('saran12') ? "is-invalid" : "" }}" id="saran12" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
-                          </div>
-                          @endif
-                        </div>
-                        @error('p12_') <span class="error" style="color: red">{{ $message }}</span> @enderror
-                      </div>
-                      {{-- Pertanyaan 2 --}}
-                      <div class="row mt-5">
-                        <label for="p13_">6.2. Apakah petugas pelayanan memberikan penjelasan yang mudah dan tidak berbeli-belit ?</label>
-                        <div class="mt-2" id="p13_">
-                          <div class="form-check form-check-inline">
-                            <label class="form-check-label">Tidak Mudah</label>
-                          </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio  " for="p13_1">1<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p13_" id="p13_1" value="1" {{{ $p13_ == '1' ? "checked" : "" }}}></label>
-                            </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p13_2">2<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p13_" id="p13_2" value="2" {{{ $p13_ == '2' ? "checked" : "" }}}></label>
-                            </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p13_3">3<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p13_" id="p13_3" value="3" {{{ $p13_ == '3' ? "checked" : "" }}}></label>
-                            </div>
-                            <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p13_4">4<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p13_" id="p13_4" value="4" {{{ $p13_ == '4' ? "checked" : "" }}}></label>
-                            </div>
-                          <div class="form-check form-check-inline">
-                            <label class="form-check-label">Sangat Mudah</label>
-                          </div>
-                          @if ($p13_ == 1 || $p13_ == 2)
-                          <div class="mt-2">
-                            <label for="domisili">Rekomendasi Perbaikan</label>
-                            <input type="saran13" wire:model="saran13" class="form-control {{$errors->first('saran13') ? "is-invalid" : "" }}" id="saran13" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
-                          </div>
-                          @endif
-                        </div>
-                        @error('p13_') <span class="error" style="color: red">{{ $message }}</span> @enderror
-                      </div>
-                        
-                      <div class="mt-5 row">
-                        <div class="col-md-4">
-                          <button class="btn btn-danger" type="button" wire:click="back(6)">Kembali</button>
-
-                        </div>
-                        <div class="text-center col-md-4">
-                          <button class="btn btn-primary" wire:click="u6" type="button">Selanjutnya</button>
-                        </div>
-                      </div>
-                    </div>
-
-
-                         {{--U7--}}
-                        <div class="needs-validation" id="step5" style="display: {{ $currentStep != 8 ? 'none' : '' }}">
-                          <h3 class="mb-3" >Kewajaran Biaya</h3>
-                         <div class="row mt-5">
-                          <label for="p14_">7.1. Bagaimana pendapat saudara tentang biaya/tarif dalam pelayanan ? <b>(Bukan Tarif PNBP)</b></label>
-                          <div class="mt-2" id="p14_">
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">Sangat Mahal</label>
-                            </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio  " for="p14_1">1<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p14_" id="p14_1" value="1" {{{ $p14_ == '1' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p14_2">2<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p14_" id="p14_2" value="2" {{{ $p14_ == '2' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p14_3">3<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p14_" id="p14_3" value="3" {{{ $p14_ == '3' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p14_4">4<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p14_" id="p14_4" value="4" {{{ $p14_ == '4' ? "checked" : "" }}}></label>
-                              </div>
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">Sangat Murah</label>
-                            </div>
-                            @if ($p14_ == 1 || $p14_ == 2)
-                            <div class="mt-2">
-                              <label for="domisili">Rekomendasi Perbaikan</label>
-                              <input type="saran14" wire:model="saran14" class="form-control {{$errors->first('saran14') ? "is-invalid" : "" }}" id="saran14" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
-                            </div>
-                            @endif
-                          </div>
-                          @error('p14_') <span class="error" style="color: red">{{ $message }}</span> @enderror
-                        </div>
-
-                        <div class="mt-5 row">
-                          <div class="col-md-4">
-                            <button class="btn btn-danger" type="button" wire:click="back(7)">Kembali</button>
-  
-                          </div>
-                          <div class="text-center col-md-4">
-                            <button class="btn btn-primary" wire:click="u7" type="button">Selanjutnya</button>
-                          </div>
-                        </div>
-
-                        </div>
-                        {{-- U7 --}}
-
-                        {{-- U8 --}}
-                        <div class="needs-validation" id="step5" style="display: {{ $currentStep != 9 ? 'none' : '' }}">
-                          <h3 class="mb-3" >Kualitas Sarana dan Prasarana</h3>
-                         {{-- Pertanyaan 4 --}}
-                         <div class="row mt-5">
-                          <label for="p15_">8.1. Bagaimana pendapat saudara tentang sarana dan prasarana pelayanan ?</label>
-                          <div class="mt-2" id="p15_">
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">Tidak Baik</label>
-                            </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio  " for="p15_1">1<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p15_" id="p15_1" value="1" {{{ $p15_ == '1' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p15_2">2<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p15_" id="p15_2" value="2" {{{ $p15_ == '2' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p15_3">3<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p15_" id="p15_3" value="3" {{{ $p15_ == '3' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p15_4">4<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p15_" id="p15_4" value="4" {{{ $p15_ == '4' ? "checked" : "" }}}></label>
-                              </div>
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">Sangat Baik</label>
-                            </div>
-                            @if ($p15_ == 1 || $p15_ == 2)
-                            <div class="mt-2">
-                              <label for="domisili">Rekomendasi Perbaikan</label>
-                              <input type="saran15" wire:model="saran15" class="form-control {{$errors->first('saran15') ? "is-invalid" : "" }}" id="saran15" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
-                            </div>
-                            @endif
-                          </div>
-                          @error('p15_') <span class="error" style="color: red">{{ $message }}</span> @enderror
-                        </div>
-
-                        {{-- Pertanyaan 5 --}}
-                         <div class="row mt-5">
-                          <label for="p16_">8.2. Apakah unit layanan seperti ruang tunggu, bahan bacaan, kotak saran/pengaduan, tv. lahan parkir, mushola, ruang menyusui berfungsi dengan baik ?</label>
-                          <div class="mt-2" id="p16_">
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">Tidak Baik</label>
-                            </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio  " for="p16_1">1<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p16_" id="p16_1" value="1" {{{ $p16_ == '1' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p16_2">2<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p16_" id="p16_2" value="2" {{{ $p16_ == '2' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p16_3">3<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p16_" id="p16_3" value="3" {{{ $p16_ == '3' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p16_4">4<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p16_" id="p16_4" value="4" {{{ $p16_ == '4' ? "checked" : "" }}}></label>
-                              </div>
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">Sangat Baik</label>
-                            </div>
-                            @if ($p16_ == 1 || $p16_ == 2)
-                            <div class="mt-2">
-                              <label for="domisili">Rekomendasi Perbaikan</label>
-                              <input type="saran16" wire:model="saran16" class="form-control {{$errors->first('saran16') ? "is-invalid" : "" }}" id="saran16" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
-                            </div>
-                            @endif
-                          </div>
-                          @error('p16_') <span class="error" style="color: red">{{ $message }}</span> @enderror
-                        </div>
-
-                        <div class="mt-5 row">
-                          <div class="col-md-4">
-                            <button class="btn btn-danger" type="button" wire:click="back(8)">Kembali</button>
-
-                          </div>
-                          <div class="text-center col-md-4">
-                            <button class="btn btn-primary" wire:click="u8" type="button">Selanjutnya</button>
-                          </div>
-                        </div>
-                      </div>
-                      {{-- U8 --}}
-
-                        {{--U9--}}
-                        <div class="needs-validation" id="step6" style="display: {{ $currentStep != 10 ? 'none' : '' }}">
-                          <h3 class="mb-3" >Penanganan Pengaduan Pelayanan</h3>
-                            {{-- Pertanyaan 1 --}}
-                         <div class="row mt-5">
-                          <label for="p17_">9.1. Bagaimana pendapat saudara tentang penanganan pengaduan penggunaan pelayanan ?</label>
-                          <div class="mt-2" id="p17_">
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">Tidak Baik</label>
-                            </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio  " for="p17_1">1<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p17_" id="p17_1" value="1" {{{ $p17_ == '1' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p17_2">2<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p17_" id="p17_2" value="2" {{{ $p17_ == '2' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p17_3">3<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p17_" id="p17_3" value="3" {{{ $p17_ == '3' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p17_4">4<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p17_" id="p17_4" value="4" {{{ $p17_ == '4' ? "checked" : "" }}}></label>
-                              </div>
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">Sangat Baik</label>
-                            </div>
-                            @if ($p17_ == 1 || $p17_ == 2)
-                            <div class="mt-2">
-                              <label for="domisili">Rekomendasi Perbaikan</label>
-                              <input type="saran17" wire:model="saran17" class="form-control {{$errors->first('saran17') ? "is-invalid" : "" }}" id="saran17" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
-                            </div>
-                            @endif
-                            @error('p17_') <span class="error" style="color: red">{{ $message }}</span> @enderror
-                          </div>
-
-                          {{-- Pertanyaan 1 --}}
-                         <div class="row mt-5">
-                            <label for="p18_">9.2. Apakah fasilitas pengaduan, saran, dan masukan yang disediakan (konsultasi email, telpon, kotak saran dan tatap muka langsung) mudah diakses ?</label>
-                            <div class="mt-2" id="p18_">
-                              <div class="form-check form-check-inline">
-                                <label class="form-check-label">Tidak Mudah</label>
-                              </div>
-                                <div class="form-check form-check-inline text-center">
-                                  <label class="form-check-label labelradio  " for="p18_1">1<br>
-                                  <input class="form-check-input mx-auto" type="radio" wire:model="p18_" id="p18_1" value="1" {{{ $p18_ == '1' ? "checked" : "" }}}></label>
-                                </div>
-                                <div class="form-check form-check-inline text-center">
-                                  <label class="form-check-label labelradio " for="p18_2">2<br>
-                                  <input class="form-check-input mx-auto" type="radio" wire:model="p18_" id="p18_2" value="2" {{{ $p18_ == '2' ? "checked" : "" }}}></label>
-                                </div>
-                                <div class="form-check form-check-inline text-center">
-                                  <label class="form-check-label labelradio " for="p18_3">3<br>
-                                  <input class="form-check-input mx-auto" type="radio" wire:model="p18_" id="p18_3" value="3" {{{ $p18_ == '3' ? "checked" : "" }}}></label>
-                                </div>
-                                <div class="form-check form-check-inline text-center">
-                                  <label class="form-check-label labelradio " for="p18_4">4<br>
-                                  <input class="form-check-input mx-auto" type="radio" wire:model="p18_" id="p18_4" value="4" {{{ $p18_ == '4' ? "checked" : "" }}}></label>
-                                </div>
-                              <div class="form-check form-check-inline">
-                                <label class="form-check-label">Sangat Mudah</label>
-                              </div>
-                              @if ($p18_ == 1 || $p18_ == 2)
-                              <div class="mt-2">
-                                <label for="domisili">Rekomendasi Perbaikan</label>
-                                <input type="saran18" wire:model="saran18" class="form-control {{$errors->first('saran18') ? "is-invalid" : "" }}" id="saran18" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
-                              </div>
-                              @endif
-                            </div>
-                            @error('p18_') <span class="error" style="color: red">{{ $message }}</span> @enderror
-                          </div>
-
-                        {{-- Pertanyaan 1 --}}
-                         <div class="row mt-5">
-                          <label for="p19_">9.3. Apakah petugas cepat merespon untuk setiap pengaduan dan saran/masukan ?</label>
-                          <div class="mt-2" id="p19_">
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">Tidak Cepat</label>
-                            </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio  " for="p19_1">1<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p19_" id="p19_1" value="1" {{{ $p19_ == '1' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p19_2">2<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p19_" id="p19_2" value="2" {{{ $p19_ == '2' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p19_3">3<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p19_" id="p19_3" value="3" {{{ $p19_ == '3' ? "checked" : "" }}}></label>
-                              </div>
-                              <div class="form-check form-check-inline text-center">
-                                <label class="form-check-label labelradio " for="p19_4">4<br>
-                                <input class="form-check-input mx-auto" type="radio" wire:model="p19_" id="p19_4" value="4" {{{ $p19_ == '4' ? "checked" : "" }}}></label>
-                              </div>
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">Sangat Cepat</label>
-                            </div>
-                            @if ($p19_ == 1 || $p19_ == 2)
-                            <div class="mt-2">
-                              <label for="domisili">Rekomendasi Perbaikan</label>
-                              <input type="saran19" wire:model="saran19" class="form-control {{$errors->first('saran19') ? "is-invalid" : "" }}" id="saran19" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
-                            </div>
-                            @endif
-                          </div>
-                          @error('p19_') <span class="error" style="color: red">{{ $message }}</span> @enderror
-                        </div>
-
-                          {{-- Pertanyaan 2 --}}
-                          <div class="row mt-5">
-                            <label for="p20_">9.4. Apakah petugas dapat memberikan penyelesaian/solusi untuk setiap pengaduan yang telah dilaporkan ?</label>
-                            <div class="mt-2" id="p20_">
-                              <div class="form-check form-check-inline">
-                                <label class="form-check-label">Tidak Dapat Memberikan Solusi</label>
-                              </div>
-                                <div class="form-check form-check-inline text-center">
-                                  <label class="form-check-label labelradio  " for="p20_1">1<br>
-                                  <input class="form-check-input mx-auto" type="radio" wire:model="p20_" id="p20_1" value="1" {{{ $p20_ == '1' ? "checked" : "" }}}></label>
-                                </div>
-                                <div class="form-check form-check-inline text-center">
-                                  <label class="form-check-label labelradio " for="p20_2">2<br>
-                                  <input class="form-check-input mx-auto" type="radio" wire:model="p20_" id="p20_2" value="2" {{{ $p20_ == '2' ? "checked" : "" }}}></label>
-                                </div>
-                                <div class="form-check form-check-inline text-center">
-                                  <label class="form-check-label labelradio " for="p20_3">3<br>
-                                  <input class="form-check-input mx-auto" type="radio" wire:model="p20_" id="p20_3" value="3" {{{ $p20_ == '3' ? "checked" : "" }}}></label>
-                                </div>
-                                <div class="form-check form-check-inline text-center">
-                                  <label class="form-check-label labelradio " for="p20_4">4<br>
-                                  <input class="form-check-input mx-auto" type="radio" wire:model="p20_" id="p20_4" value="4" {{{ $p20_ == '4' ? "checked" : "" }}}></label>
-                                </div>
-                              <div class="form-check form-check-inline">
-                                <label class="form-check-label">Sangat Dapat Memberikan Solusi</label>
-                              </div>
-                              @if ($p20_ == 1 || $p20_ == 2)
-                              <div class="mt-2">
-                                <label for="domisili">Rekomendasi Perbaikan</label>
-                                <input type="saran20" wire:model="saran20" class="form-control {{$errors->first('saran20') ? "is-invalid" : "" }}" id="saran20" placeholder="Mohon Berikan Kami Rekomendasi Untuk Perbaikan Layanan">
-                              </div>
-                              @endif
-                            </div>
-                            @error('p20_') <span class="error" style="color: red">{{ $message }}</span> @enderror
-                          </div>
-
-                          <div class="mt-5 row">
-                            <div class="col-md-4">
-                              <button class="btn btn-danger" type="button" wire:click="back(9)">Kembali</button>
-
-                            </div>
-                            <div class="text-center col-md-4">
-                              <button class="btn btn-primary" wire:click="u9" type="button">Selanjutnya</button>
-                            </div>
-                          </div>
-                         </div>
-                        </div>
+                       
                       
-                      <div class="needs-validation" id="step6" style="display: {{ $currentStep != 11 ? 'none' : '' }}">
+                      <div class="needs-validation" id="step5" style="display: {{ $currentStep != 6 ? 'none' : '' }}">
                         <h3 class="mb-3" >Kritik dan Saran</h3>
                          {{-- Pertanyaan 3 --}}
                             <div class="row mt-5">

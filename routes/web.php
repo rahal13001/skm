@@ -36,6 +36,10 @@ Route::middleware('auth')->group(function(){
 
 });
 
+Route::get('/pdftes', function(){
+    return view('pdf.pdf3');
+});
+
 
 
 Route::get("/pdf/{id}/{nama}", [DatasurveisController::class, 'pdf'])->name('pdf');

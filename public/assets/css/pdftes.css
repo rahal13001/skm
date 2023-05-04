@@ -1,0 +1,115 @@
+/* Set page margins */
+
+  
+  /* Set line spacing */
+  body {
+    line-height: 1.5;
+    margin: 1cm 1cm 1cm 1cm;
+  }
+  
+  /* Set font size for title */
+  h1 {
+    font-size: 14pt;
+  }
+  
+  /* Set font size for body text */
+  p {
+    font-size: 12pt;
+  }
+  
+  /* Style the image */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Style the table */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  table th {
+    text-align: left;
+    background-color: #f2f2f2;
+  }
+  
+  /* Style the QR code image */
+  .qr-code {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  /* Set page breaks for long answers */
+  .long-answer {
+    page-break-inside: avoid;
+  }
+  
+  /* Set page break before title */
+  /* h1 {
+    page-break-before: always;
+  } */
+  
+  /* Set spacing between question, answer, and recommendation */
+  .question, .answer {
+    margin-bottom: 5px;
+  }
+  
+  /* Set spacing between different questions */
+  .question + .question {
+    margin-top: 10px;
+  }
+
+   p{
+        margin-bottom: 0;
+    }
+  
+  .answer{
+    padding-left: 0.5cm;
+    margin-top: 0;
+    
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    font-size: 12pt;
+  }
+  
+  .header p {
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .header p span {
+    flex-basis: 8em;
+    flex-shrink: 0;
+    text-align: right;
+    margin-right: 1em;
+    font-weight: bold;
+  }
+
+  .kop{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  footer{
+    margin-top: 1cm;
+  }
+
+
+  
+
+ 
