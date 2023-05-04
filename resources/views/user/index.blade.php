@@ -49,7 +49,7 @@
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(img/7.png)">
+        <div class="carousel-item active" style="background-image: url(img/rani_pelayanan.jpeg)">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Selamat Datang di <span>LPSPL Sorong</span></h2>
@@ -60,7 +60,7 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(img/1.jpg)">
+        <div class="carousel-item" style="background-image: url(img/kintan_komputer.jpeg)">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Kami Selalu Siap Melayani</h2>
@@ -71,7 +71,7 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(img/4.jpg)">
+        <div class="carousel-item" style="background-image: url(img/kintan_salam.jpeg)">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Menuju Zona Integritas</h2>
