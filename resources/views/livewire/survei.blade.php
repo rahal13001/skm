@@ -153,26 +153,26 @@
                     <label for="p1_">1.1. Bagaimana penilaian Bapak/Ibu tentang kesesuaian persyaratan pelayanan yang harus dipenuhi dengan persyaratan pelayanan yang diinformasikan ?</label>
                     <div class="mt-2" id="p1_">
                       <div class="form-check form-check-inline">
-                        <label class="form-check-label">Tidak Sesuai</label>
+                        <label class="form-check-label">Sangat Sesuai</label>
                       </div>
                         <div class="form-check form-check-inline text-center">
-                          <label class="form-check-label labelradio  " for="p1_1">1<br>
-                          <input class="form-check-input mx-auto" type="radio" wire:model="p1_" id="p1_1" value="1" {{{ $p1_ == '1' ? "checked" : "" }}}></label>
+                          <label class="form-check-label labelradio  " for="p1_1">4<br>
+                          <input class="form-check-input mx-auto" type="radio" wire:model="p1_" id="p1_1" value="4" {{{ $p1_ == '4' ? "checked" : "" }}}></label>
                         </div>
                         <div class="form-check form-check-inline text-center">
-                          <label class="form-check-label labelradio " for="p1_2">2<br>
-                          <input class="form-check-input mx-auto" type="radio" wire:model="p1_" id="p1_2" value="2" {{{ $p1_ == '2' ? "checked" : "" }}}></label>
+                          <label class="form-check-label labelradio " for="p1_2">3<br>
+                          <input class="form-check-input mx-auto" type="radio" wire:model="p1_" id="p1_2" value="3" {{{ $p1_ == '3' ? "checked" : "" }}}></label>
                         </div>
                         <div class="form-check form-check-inline text-center">
-                          <label class="form-check-label labelradio " for="p1_3">3<br>
-                          <input class="form-check-input mx-auto" type="radio" wire:model="p1_" id="p1_3" value="3" {{{ $p1_ == '3' ? "checked" : "" }}}></label>
+                          <label class="form-check-label labelradio " for="p1_3">2<br>
+                          <input class="form-check-input mx-auto" type="radio" wire:model="p1_" id="p1_3" value="2" {{{ $p1_ == '2' ? "checked" : "" }}}></label>
                         </div>
                         <div class="form-check form-check-inline text-center">
-                          <label class="form-check-label labelradio " for="p1_4">4<br>
-                          <input class="form-check-input mx-auto" type="radio" wire:model="p1_" id="p1_4" value="4" {{{ $p1_ == '4' ? "checked" : "" }}}></label>
+                          <label class="form-check-label labelradio " for="p1_4">1<br>
+                          <input class="form-check-input mx-auto" type="radio" wire:model="p1_" id="p1_4" value="1" {{{ $p1_ == '1' ? "checked" : "" }}}></label>
                         </div>
                       <div class="form-check form-check-inline">
-                        <label class="form-check-label">Sangat Sesuai</label>
+                        <label class="form-check-label">Tidak Sesuai</label>
                       </div>
                       @if ($p1_ == 1 || $p1_ == 2)
                       <div class="mt-2">
@@ -189,26 +189,26 @@
                       <label for="p2_">1.2. Bagaimana penilaian Bapak/Ibu mengenai kemudahan prosedur yang dijalani untuk mendapatkan layanan ?</label>
                       <div class="mt-2" id="p2_">
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Tidak Mudah</label>
+                          <label class="form-check-label">Sangat Mudah</label>
                         </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio  " for="p2_1">1<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p2_" id="p2_1" value="1" {{{ $p2_ == '1' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio  " for="p2_1">4<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p2_" id="p2_1" value="4" {{{ $p2_ == '4' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p2_2">2<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p2_" id="p2_2" value="2" {{{ $p2_ == '2' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p2_2">3<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p2_" id="p2_2" value="3" {{{ $p2_ == '3' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p2_3">3<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p2_" id="p2_3" value="3" {{{ $p2_ == '3' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p2_3">2<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p2_" id="p2_3" value="2" {{{ $p2_ == '2' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p2_4">4<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p2_" id="p2_4" value="4" {{{ $p2_ == '4' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p2_4">1<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p2_" id="p2_4" value="1" {{{ $p2_ == '1' ? "checked" : "" }}}></label>
                           </div>
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Sangat Mudah</label>
+                          <label class="form-check-label">Tidak Mudah</label>
                         </div>
                         @if ($p2_ == 1 || $p2_ == 2)
                         <div class="mt-2">
@@ -244,26 +244,26 @@
                       <label for="p3_">2.1 Bagaimana penilaian Bapak/Ibu mengenai kesesuaian jangka waktu penyelesaian pelayanan dengan yang diinformasikan ?</label>
                       <div class="mt-2" id="p3_">
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Tidak Sesuai </label>
+                          <label class="form-check-label">Sangat Sesuai </label>
                         </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio  " for="p3_1">1<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_1" value="1" {{{ $p3_ == '1' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio  " for="p3_1">4<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_1" value="4" {{{ $p3_ == '4' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p3_2">2<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_2" value="2" {{{ $p3_ == '2' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p3_2">3<br>
+                              <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_2" value="3" {{{ $p3_ == '3' ? "checked" : "" }}}></label>
                             </div>
                             <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p3_3">3<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_3" value="3" {{{ $p3_ == '3' ? "checked" : "" }}}></label>
+                              <label class="form-check-label labelradio " for="p3_3">2<br>
+                              <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_3" value="2" {{{ $p3_ == '2' ? "checked" : "" }}}></label>
                             </div>
                             <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p3_4">4<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_4" value="4" {{{ $p3_ == '4' ? "checked" : "" }}}></label>
+                              <label class="form-check-label labelradio " for="p3_4">1<br>
+                              <input class="form-check-input mx-auto" type="radio" wire:model="p3_" id="p3_4" value="1" {{{ $p3_ == '1' ? "checked" : "" }}}></label>
                             </div>
                             <div class="form-check form-check-inline">
-                              <label class="form-check-label">Sangat Sesuai </label>
+                              <label class="form-check-label">Tidak Sesuai </label>
                             </div>
                             @if ($p3_ == 1 || $p3_ == 2)
                             <div class="mt-2">
@@ -280,26 +280,26 @@
                       <label for="p4_">2.2. Bagaimana penilaian Bapak/Ibu mengenai kesesuaian biaya pelayanan yang dibayarkan dengan yang diinformasikan ?</label>
                       <div class="mt-2" id="p4_">
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Tidak Sesuai</label>
+                          <label class="form-check-label">Sangat Sesuai</label>
                         </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio  " for="p4_1">1<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p4_" id="p4_1" value="1" {{{ $p4_ == '1' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio  " for="p4_1">4<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p4_" id="p4_1" value="4" {{{ $p4_ == '4' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p4_2">2<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p4_" id="p4_2" value="2" {{{ $p4_ == '2' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p4_2">3<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p4_" id="p4_2" value="3" {{{ $p4_ == '3' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p4_3">3<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p4_" id="p4_3" value="3" {{{ $p4_ == '3' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p4_3">2<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p4_" id="p4_3" value="2" {{{ $p4_ == '2' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p4_4">4<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p4_" id="p4_4" value="4" {{{ $p4_ == '4' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p4_4">1<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p4_" id="p4_4" value="1" {{{ $p4_ == '1' ? "checked" : "" }}}></label>
                           </div>
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Sangat Sesuai</label>
+                          <label class="form-check-label">Tidak Sesuai</label>
                         </div>
                         @if ($p4_ == 1 || $p4_ == 2)
                         <div class="mt-2">
@@ -316,26 +316,26 @@
                       <label for="p5_">2.3. Bagaimana pendapat Saudara tentang kesesuaian produk pelayanan antara yang ada pada publikasi dengan pelayanan yang diberikan ?</label>
                       <div class="mt-2" id="p5_">
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Tidak Sesuai</label>
+                          <label class="form-check-label">Sangat Sesuai</label>
                         </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio  " for="p5_1">1<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p5_" id="p5_1" value="1" {{{ $p5_ == '1' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio  " for="p5_1">4<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p5_" id="p5_1" value="4" {{{ $p5_ == '4' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p5_2">2<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p5_" id="p5_2" value="2" {{{ $p5_ == '2' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p5_2">3<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p5_" id="p5_2" value="3" {{{ $p5_ == '3' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p5_3">3<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p5_" id="p5_3" value="3" {{{ $p5_ == '3' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p5_3">2<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p5_" id="p5_3" value="2" {{{ $p5_ == '2' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p5_4">4<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p5_" id="p5_4" value="4"{{{ $p5_ == '4' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p5_4">1<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p5_" id="p5_4" value="1"{{{ $p5_ == '1' ? "checked" : "" }}}></label>
                           </div>
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Sangat Sesuai</label>
+                          <label class="form-check-label">Tidak Sesuai</label>
                         </div>
                         @if ($p5_ == 1 || $p5_ == 2)
                         <div class="mt-2">
@@ -367,26 +367,26 @@
                       <label for="p6_">3.1. Bagaimana kecepatan respon (membuka halaman, konten, pencarian informasi, unduh/unggah) dari aplikasi sistem pelayanan yang diberikan ?</label>
                       <div class="mt-2" id="p6_">
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Tidak Cepat</label>
+                          <label class="form-check-label">Sangat Cepat</label>
                         </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio  " for="p6_1">1<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p6_" id="p6_1" value="1" {{{ $p6_ == '1' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio  " for="p6_1">4<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p6_" id="p6_1" value="4" {{{ $p6_ == '4' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p6_2">2<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p6_" id="p6_2" value="2" {{{ $p6_ == '2' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p6_2">3<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p6_" id="p6_2" value="3" {{{ $p6_ == '3' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p6_3">3<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p6_" id="p6_3" value="3" {{{ $p6_ == '3' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p6_3">2<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p6_" id="p6_3" value="2" {{{ $p6_ == '2' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p6_4">4<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p6_" id="p6_4" value="4" {{{ $p6_ == '4' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p6_4">1<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p6_" id="p6_4" value="1" {{{ $p6_ == '1' ? "checked" : "" }}}></label>
                           </div>
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Sangat Cepat</label>
+                          <label class="form-check-label">Tidak Cepat</label>
                         </div>
                         @if ($p6_ == 1 || $p6_ == 2)
                         <div class="mt-2">
@@ -406,20 +406,20 @@
                           <label class="form-check-label">Tidak Mudah</label>
                         </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio  " for="p7_1">1<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p7_" id="p7_1" value="1" {{{ $p7_ == '1' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio  " for="p7_1">4<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p7_" id="p7_1" value="4" {{{ $p7_ == '4' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p7_2">2<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p7_" id="p7_2" value="2" {{{ $p7_ == '2' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p7_2">3<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p7_" id="p7_2" value="3" {{{ $p7_ == '3' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p7_3">3<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p7_" id="p7_3" value="3" {{{ $p7_ == '3' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p7_3">2<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p7_" id="p7_3" value="2" {{{ $p7_ == '2' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p7_4">4<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p7_" id="p7_4" value="4" {{{ $p7_ == '4' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p7_4">1<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p7_" id="p7_4" value="1" {{{ $p7_ == '1' ? "checked" : "" }}}></label>
                           </div>
                         <div class="form-check form-check-inline">
                           <label class="form-check-label">Sangat Mudah</label>
@@ -438,26 +438,26 @@
                       <label for="p8_">3.3. Bagaimana penilaian Bapak/Ibu tentang kualitas isi/konten dari aplikasi sistem layanan ?</label>
                       <div class="mt-2" id="p8_">
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Tidak Baik</label>
+                          <label class="form-check-label">Sangat Baik</label>
                         </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio  " for="p8_1">1<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_1" value="1" {{{ $p8_ == '1' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio  " for="p8_1">4<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_1" value="4" {{{ $p8_ == '4' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p8_2">2<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_2" value="2" {{{ $p8_ == '2' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p8_2">3<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_2" value="3" {{{ $p8_ == '3' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p8_3">3<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_3" value="3" {{{ $p8_ == '3' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p8_3">2<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_3" value="2" {{{ $p8_ == '2' ? "checked" : "" }}}></label>
                           </div>
                           <div class="form-check form-check-inline text-center">
-                            <label class="form-check-label labelradio " for="p8_4">4<br>
-                            <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_4" value="4" {{{ $p8_ == '4' ? "checked" : "" }}}></label>
+                            <label class="form-check-label labelradio " for="p8_4">1<br>
+                            <input class="form-check-input mx-auto" type="radio" wire:model="p8_" id="p8_4" value="1" {{{ $p8_ == '1' ? "checked" : "" }}}></label>
                           </div>
                         <div class="form-check form-check-inline">
-                          <label class="form-check-label">Sangat Baik</label>
+                          <label class="form-check-label">Tidak Baik</label>
                         </div>
                         @if ($p8_ == 1 || $p8_ == 2)
                         <div class="mt-2">
@@ -499,20 +499,20 @@
                             <label class="form-check-label">Tidak Baik</label>
                           </div>
                             <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio  " for="p9_1">1<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p9_" id="p9_1" value="1" {{{ $p9_ == '1' ? "checked" : "" }}}></label>
+                              <label class="form-check-label labelradio  " for="p9_1">4<br>
+                              <input class="form-check-input mx-auto" type="radio" wire:model="p9_" id="p9_1" value="4" {{{ $p9_ == '4' ? "checked" : "" }}}></label>
                             </div>
                             <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p9_2">2<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p9_" id="p9_2" value="2" {{{ $p9_ == '2' ? "checked" : "" }}}></label>
+                              <label class="form-check-label labelradio " for="p9_2">3<br>
+                              <input class="form-check-input mx-auto" type="radio" wire:model="p9_" id="p9_2" value="3" {{{ $p9_ == '3' ? "checked" : "" }}}></label>
                             </div>
                             <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p9_3">3<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p9_" id="p9_3" value="3" {{{ $p9_ == '3' ? "checked" : "" }}}></label>
+                              <label class="form-check-label labelradio " for="p9_3">2<br>
+                              <input class="form-check-input mx-auto" type="radio" wire:model="p9_" id="p9_3" value="2" {{{ $p9_ == '2' ? "checked" : "" }}}></label>
                             </div>
                             <div class="form-check form-check-inline text-center">
-                              <label class="form-check-label labelradio " for="p9_4">4<br>
-                              <input class="form-check-input mx-auto" type="radio" wire:model="p9_" id="p9_4" value="4" {{{ $p9_ == '4' ? "checked" : "" }}}></label>
+                              <label class="form-check-label labelradio " for="p9_4">1<br>
+                              <input class="form-check-input mx-auto" type="radio" wire:model="p9_" id="p9_4" value="1" {{{ $p9_ == '1' ? "checked" : "" }}}></label>
                             </div>
                           <div class="form-check form-check-inline">
                             <label class="form-check-label">Sangat Baik</label>
